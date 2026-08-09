@@ -113,20 +113,25 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
   });
 </script>
 <style>
-  .sleep-well{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(165px,.65fr) minmax(190px,.65fr);gap:18px;align-items:center;margin:0 0 12px;padding:17px 19px;border:1px solid #b9d2ca;border-radius:16px;background:linear-gradient(120deg,#fffdf7,#e8f1ec);color:#102f38;box-shadow:0 6px 15px #061a2015}.sleep-well-copy{padding:3px 4px}.sleep-well-eyebrow{display:block;color:#7a281f;font:700 13px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}.sleep-well h2{margin:5px 0 7px;font:normal 28px/1.08 Georgia,serif}.sleep-well p{margin:0;font:18px/1.35 Arial,sans-serif;color:#35545b}.sleep-well .sleep-price{display:inline-block;margin-top:11px;padding:5px 10px;border-radius:999px;background:#073c4a;color:#fff;font:700 17px/1 Arial,sans-serif}.sleep-well figure{margin:0;min-height:150px;border-radius:11px;overflow:hidden}.sleep-well .sleep-product img{display:block;width:100%;height:100%;min-height:150px;object-fit:cover;object-position:center}.sleep-payment{align-self:stretch;display:flex;align-items:center;justify-content:center;padding:7px;border-left:1px solid #b9d2ca}.sleep-payment img{display:block;width:190px;height:202px;object-fit:contain}@media(max-width:680px){.sleep-well{grid-template-columns:1fr}.sleep-well figure,.sleep-well .sleep-product img{min-height:185px}.sleep-payment{border-left:0;border-top:1px solid #b9d2ca;padding-top:14px}.sleep-payment img{width:210px;height:224px}}
+  .sleep-well{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(165px,.65fr);gap:18px;align-items:center;margin:0 0 12px;padding:17px 19px;border:1px solid #b9d2ca;border-radius:16px;background:linear-gradient(120deg,#fffdf7,#e8f1ec);color:#102f38;box-shadow:0 6px 15px #061a2015}.sleep-well-copy{padding:3px 4px}.sleep-well-eyebrow{display:block;color:#7a281f;font:700 13px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}.sleep-well h2{margin:5px 0 7px;font:normal 28px/1.08 Georgia,serif}.sleep-well p{margin:0;font:18px/1.35 Arial,sans-serif;color:#35545b}.sleep-well .sleep-price,.market-price{display:inline-block;margin-top:11px;padding:5px 10px;border-radius:999px;background:#073c4a;color:#fff;font:700 17px/1 Arial,sans-serif}.sleep-well figure{margin:0;min-height:150px;border-radius:11px;overflow:hidden}.sleep-well .sleep-product img{display:block;width:100%;height:100%;min-height:150px;object-fit:cover;object-position:center}.cottage-market{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 12px}.market-item{padding:17px 19px;border:1px solid #b9d2ca;border-radius:16px;background:#fffdf7;box-shadow:0 5px 13px #061a2012}.market-item h2{margin:5px 0 7px;font:normal 25px/1.1 Georgia,serif}.market-item p{margin:0;font:17px/1.35 Arial,sans-serif;color:#35545b}.market-item .market-label{display:block;color:#7a281f;font:700 13px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}.market-item.juice{background:linear-gradient(120deg,#fffdf7,#f2f7e9)}.market-item.bottles{background:linear-gradient(120deg,#fffdf7,#e8f1f3)}@media(max-width:680px){.sleep-well,.cottage-market{grid-template-columns:1fr}.sleep-well figure,.sleep-well .sleep-product img{min-height:185px}}
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     // Keep this false while the Sleep Set is not for sale. Set it to true to restore
     // the saved card (including its product image and Venmo QR code) later.
-    const sleepWellEnabled = false;
+    const sleepWellEnabled = true;
     const stay = document.querySelector('.return-stay');
     if (!sleepWellEnabled || !stay || document.querySelector('.sleep-well')) return;
     const feature = document.createElement('section');
     feature.className = 'sleep-well';
     feature.setAttribute('aria-label', 'Sleep well');
-    feature.innerHTML = '<div class="sleep-well-copy"><span class="sleep-well-eyebrow">Sleep well</span><h2>Blackout Sleep Set</h2><p>Two silky, cotton-filled sleep masks: lightweight, smooth, and made to help block the beautiful sunrise on the ocean at 6:00 AM tomorrow.</p><span class="sleep-price">$20 · two masks</span></div><figure class="sleep-product"><img src="sleep-well-eye-mask.png" alt="Black sleep mask in its protective wrap on white linen"></figure><div class="sleep-payment"><img src="sleep-well-venmo.png" alt="Venmo QR code for payment"></div>';
+    feature.innerHTML = '<div class="sleep-well-copy"><span class="sleep-well-eyebrow">Sleep well</span><h2>Blackout Sleep Set</h2><p>Two silky, cotton-filled sleep masks: lightweight, smooth, and made to help block the beautiful sunrise on the ocean.</p><span class="sleep-price">$20 · two masks</span></div><figure class="sleep-product"><img src="sleep-well-eye-mask.png" alt="Black sleep mask in its protective wrap on white linen"></figure>';
     stay.insertAdjacentElement('beforebegin', feature);
+    const market = document.createElement('section');
+    market.className = 'cottage-market';
+    market.setAttribute('aria-label', 'Cottage market');
+    market.innerHTML = '<article class="market-item bottles"><span class="market-label">Stay hydrated</span><h2>ThermoFlask · 32 oz</h2><p>Leakproof, insulated stainless-steel water bottles in assorted colors.</p><span class="market-price">$30 one · $55 two</span></article><article class="market-item juice"><span class="market-label">Wellness cooler</span><h2>Pressed Juicery Smoothies</h2><p>Cold-pressed 10 oz wellness smoothies in bright, fruit-forward flavors.</p><span class="market-price">Available at the front desk</span></article>';
+    feature.insertAdjacentElement('afterend', market);
   });
 </script>
 </body>
