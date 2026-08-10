@@ -549,5 +549,195 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
 <style>
   #home .home-promo-row .home-guestbook::before,#home .home-promo-row .store-home::after{background-size:contain;background-color:#fffef7}
 </style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const stay = document.querySelector('.return-stay');
+    const detailText = 'The Dome Room and Asian Room are both available Monday, August 10 through Friday, August 14.';
+    const simplifyStay = () => {
+      stay?.querySelector('p')?.remove();
+      stay?.querySelector('.return-event a')?.remove();
+      const detail = stay?.querySelector('.return-event span');
+      if (detail && detail.textContent !== detailText) detail.textContent = detailText;
+    };
+    if (stay) {
+      simplifyStay();
+      new MutationObserver(simplifyStay).observe(stay, { childList: true, subtree: true });
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Dance class is paused for now.
+    document.querySelector('#store .store-dance')?.remove();
+
+    // Keep the Store page focused on its products rather than repeating the home-card subtitle.
+    document.querySelector('#store .store-heading p')?.remove();
+
+    const sleepImage = document.querySelector('.well-showcase figure:first-child img');
+    if (sleepImage) {
+      sleepImage.src = 'sleep-well-organza-set-v2.png';
+      sleepImage.alt = 'Williams Cottage sleep set in a white organza bag with two black eye masks and earplugs';
+    }
+
+    const priceList = document.querySelector('.price-list');
+    if (priceList) priceList.innerHTML = '<span>Stay nourished · $10</span><span>Sleep soundly · $15</span><span>Stay hydrated · $30</span>';
+
+    document.querySelector('.vote-card p')?.remove();
+    const voteButton = document.getElementById('storeVoteSubmit');
+    voteButton?.addEventListener('click', () => {
+      const idea = document.getElementById('storeVote')?.value.trim();
+      if (idea) {
+        const previousRoom = state.room;
+        state.room = 'Cottage store';
+        newItem('Stocking idea', idea);
+        state.room = previousRoom;
+      }
+    }, true);
+  });
+</script>
+<style>
+  #home .weekly-pick[data-engleside-pick] h2{font-size:30px}
+  #home .weekly-pick[data-engleside-pick] .weekly-pick-copy>p,#home .weekly-pick[data-engleside-pick] .engleside-options p{font-size:17px;line-height:1.45}
+  #home .weekly-pick[data-engleside-pick] a{font-size:16px;padding:11px 15px}
+</style>
+<style>
+  #home .weekly-pick[data-engleside-pick]{grid-template-columns:1fr 1fr}
+  #home .weekly-pick[data-engleside-pick] figure{padding:16px;background:#f6f5e8}
+  #home .weekly-pick[data-engleside-pick] img{border-radius:10px}
+  @media(max-width:680px){#home .weekly-pick[data-engleside-pick]{grid-template-columns:minmax(0,1fr) 1fr}#home .weekly-pick[data-engleside-pick] figure{padding:10px}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const priceList = document.querySelector('.price-list');
+    if (priceList) priceList.innerHTML = '<span>Sleep soundly · $15</span><span>Stay hydrated · $30</span><span>Stay nourished · $10</span>';
+  });
+</script>
+<style>
+  .weekly-pick-eyebrow,.return-eyebrow,.market-label,.sleep-well-eyebrow,.eyebrow{font-size:16px!important;letter-spacing:.12em}
+  #home .store-home span{font-size:16px!important}
+</style>
+<style>
+  #home .home-grid{grid-template-columns:repeat(2,1fr)}
+  #home .weekly-pick[data-engleside-pick] h2{margin-bottom:14px}
+  #home .weekly-pick[data-engleside-pick] .engleside-options p:last-child{margin-bottom:14px}
+  #home .weekly-pick[data-howards-favorite]{grid-template-columns:1fr 1fr;align-items:stretch}
+  #home .weekly-pick[data-howards-favorite] figure{padding:16px;background:#f6f5e8;min-height:205px}
+  #home .weekly-pick[data-howards-favorite] img{min-height:0;height:100%;object-fit:contain;border-radius:10px}
+  @media(max-width:680px){#home .home-grid{grid-template-columns:1fr}#home .weekly-pick[data-howards-favorite]{grid-template-columns:1fr 1fr}#home .weekly-pick[data-howards-favorite] figure{padding:10px;min-height:180px}}
+</style>
+<style>
+  #home .tile i{display:inline-block;margin:0 10px 0 0;vertical-align:middle}
+  #home .tile b{display:inline-block;vertical-align:middle}
+  #home .tile span{margin-top:7px}
+</style>
+<style>
+  .return-title-row{display:flex;align-items:center;justify-content:space-between;gap:16px}
+  .return-title-row h2{margin-bottom:7px!important}
+  .return-book-now{flex:0 0 auto;padding:10px 16px;border-radius:999px;background:#9a584b;color:#fff!important;font:700 16px/1 Arial,sans-serif;text-decoration:none;box-shadow:0 2px 0 #63382f}
+  .return-book-now:hover{background:#7d453b}
+  @media(max-width:620px){.return-title-row{align-items:flex-start}.return-book-now{padding:9px 13px;font-size:14px}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const stay = document.querySelector('#home .return-stay');
+    const heading = stay?.querySelector('h2');
+    if (!stay || !heading || stay.querySelector('.return-book-now')) return;
+    const row = document.createElement('div');
+    row.className = 'return-title-row';
+    heading.before(row);
+    row.append(heading);
+    const book = document.createElement('a');
+    book.className = 'return-book-now';
+    book.href = 'https://secure.thinkreservations.com/williamscottageinn/reservations';
+    book.target = '_blank';
+    book.rel = 'noopener';
+    book.textContent = 'Book now';
+    row.append(book);
+  });
+</script>
+<style>
+  #home .home-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media(max-width:680px){#home .home-grid{grid-template-columns:1fr}}
+</style>
+<style>
+  .juice-choice .ingredients-link{display:inline-block;margin-top:4px;color:#7d453b;font:700 15px/1.3 Arial,sans-serif;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const ingredientLinks = [
+      'https://pressed.com/products/acai-berry-wellness-smoothie',
+      'https://pressed.com/products/strawberry-orange-mango-smoothie',
+      'https://pressed.com/products/healthy-tropical-smoothie',
+      'https://pressed.com/products/avocado-green-smoothie'
+    ];
+    document.querySelectorAll('.juice-choice').forEach((choice, index) => {
+      if (choice.querySelector('.ingredients-link') || !ingredientLinks[index]) return;
+      const link = document.createElement('a');
+      link.className = 'ingredients-link';
+      link.href = ingredientLinks[index];
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = 'Ingredients';
+      choice.append(link);
+    });
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const home = document.getElementById('home');
+    const engleside = home?.querySelector('[data-engleside-pick]');
+    const howards = home?.querySelector('[data-howards-favorite]');
+    if (engleside && howards) home.insertBefore(engleside, howards);
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const homeLabel = document.querySelector('.store-home b');
+    const storeHeading = document.querySelector('#store .store-heading h1');
+    if (homeLabel) homeLabel.textContent = 'Relax and recover';
+    if (storeHeading) storeHeading.textContent = 'Relax and recover';
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const row = document.querySelector('#home .home-promo-row');
+    const nextStay = document.querySelector('#home .return-stay');
+    if (row && nextStay) row.insertAdjacentElement('afterend', nextStay);
+  });
+</script>
+<style>
+  /* Make the two most useful home actions immediately recognizable. */
+  #home .home-promo-row .home-guestbook{
+    background:linear-gradient(135deg,#edf5df,#cfe0aa)!important;
+    border:2px solid #4b693f!important;
+    box-shadow:0 7px 18px rgba(34,47,40,.22)!important;
+    color:#263a34!important;
+  }
+  #home .home-promo-row .home-guestbook a{color:#365448!important;font-weight:800}
+  #home .home-promo-row .store-home{
+    background:linear-gradient(135deg,#edf5df,#cfe0aa)!important;
+    border:2px solid #4b693f!important;
+    box-shadow:0 7px 18px rgba(34,47,40,.22)!important;
+    color:#1e382d!important;
+  }
+  #home .home-promo-row .store-home span{color:#7d453b!important;font-weight:800}
+  #home .home-promo-row .store-home b{color:#1e382d!important}
+  #home .home-promo-row .store-home em{color:#365448!important}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const home = document.getElementById('home');
+    const quote = home?.querySelector('.home-quote');
+    const engleside = home?.querySelector('[data-engleside-pick]');
+    const howards = home?.querySelector('[data-howards-favorite]');
+    if (quote && engleside && howards) howards.before(quote);
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Kept in the source so Howard's can return as a future guest favorite.
+    document.querySelector('#home [data-howards-favorite]')?.remove();
+  });
+</script>
 </body>
 </html>
