@@ -1,13 +1,333 @@
 {
-  "updated": "2026-08-09",
+  "updated": "2026-08-10",
   "events": {
-    "2026-08-09": ["Pretty Woman: The Musical · 2:00 PM", "Cinderella · 6:00 PM"],
-    "2026-08-10": ["Taylor Mason · 6:00 PM", "Mike Marino · 8:30 PM"]
+    "2026-08-10": [
+      "Aug 10 Taylor Mason - Family Comedy Night · 6:00 PM",
+      "Aug 10 Mike Marino - Comedy Night · 8:30 PM"
+    ],
+    "2026-08-11": [
+      "Aug 11 Pretty Woman: The Musical · 2:00 PM",
+      "Aug 11 Pretty Woman: The Musical · 8:00 PM"
+    ],
+    "2026-08-12": [
+      "Aug 12 Aladdin, Jr. · 6:00 PM",
+      "Aug 12 Pretty Woman: The Musical · 8:00 PM"
+    ],
+    "2026-08-13": [
+      "Aug 13 Aladdin, Jr. · 6:00 PM",
+      "Aug 13 Pretty Woman: The Musical · 8:00 PM"
+    ],
+    "2026-08-14": [
+      "Aug 14 Aladdin, Jr. · 6:00 PM",
+      "Aug 14 Pretty Woman: The Musical · 8:00 PM"
+    ],
+    "2026-08-15": [
+      "Aug 15 Aladdin, Jr. · 6:00 PM",
+      "Aug 15 Pretty Woman: The Musical · 8:00 PM"
+    ],
+    "2026-08-16": [
+      "Aug 16 Pretty Woman: The Musical · 2:00 PM",
+      "Aug 16 Aladdin, Jr. · 6:00 PM"
+    ],
+    "2026-08-18": [
+      "Aug 18 1776 · 8:00 PM"
+    ],
+    "2026-08-19": [
+      "Aug 19 Wizard of Oz · 6:00 PM",
+      "Aug 19 1776 · 8:00 PM"
+    ],
+    "2026-08-20": [
+      "Aug 20 1776 · 2:00 PM",
+      "Aug 20 Wizard of Oz · 6:00 PM",
+      "Aug 20 1776 · 8:00 PM"
+    ],
+    "2026-08-21": [
+      "Aug 21 Wizard of Oz · 6:00 PM",
+      "Aug 21 1776 · 8:00 PM"
+    ],
+    "2026-08-22": [
+      "Aug 22 Wizard of Oz · 6:00 PM",
+      "Aug 22 1776 · 8:00 PM"
+    ],
+    "2026-08-23": [
+      "Aug 23 1776 · 2:00 PM",
+      "Aug 23 Wizard of Oz · 6:00 PM",
+      "Aug 23 Comedy Night - Fundraiser for the JCC of LBI · 8:00 PM"
+    ],
+    "2026-08-24": [
+      "Aug 24 Winslow - An Eagles Tribute Band · 5:00 PM",
+      "Aug 24 Winslow - An Eagles Tribute Band · 8:00 PM"
+    ],
+    "2026-08-25": [
+      "Aug 25 1776 · 2:00 PM",
+      "Aug 25 1776 · 8:00 PM"
+    ],
+    "2026-08-26": [
+      "Aug 26 Snow White · 6:00 PM",
+      "Aug 26 1776 · 8:00 PM"
+    ],
+    "2026-08-27": [
+      "Aug 27 1776 · 2:00 PM",
+      "Aug 27 Snow White · 6:00 PM",
+      "Aug 27 1776 · 8:00 PM"
+    ],
+    "2026-08-28": [
+      "Aug 28 Snow White · 6:00 PM",
+      "Aug 28 Comedy night · 8:30 PM"
+    ],
+    "2026-08-29": [
+      "Aug 29 Snow White · 6:00 PM",
+      "Aug 29 1776 · 8:00 PM"
+    ],
+    "2026-08-30": [
+      "Aug 30 1776 · 2:00 PM",
+      "Aug 30 Snow White · 6:00 PM"
+    ],
+    "2026-09-01": [
+      "Sep 1 Ghost The Musical · 8:00 PM"
+    ],
+    "2026-09-02": [
+      "Sep 2 Little Mermaid · 6:00 PM",
+      "Sep 2 Ghost The Musical · 8:00 PM"
+    ],
+    "2026-09-03": [
+      "Sep 3 Ghost The Musical · 2:00 PM",
+      "Sep 3 Little Mermaid · 6:00 PM",
+      "Sep 3 Ghost The Musical · 8:00 PM"
+    ],
+    "2026-09-04": [
+      "Sep 4 Little Mermaid · 6:00 PM",
+      "Sep 4 Ghost The Musical · 8:00 PM"
+    ],
+    "2026-09-05": [
+      "Sep 5 Ghost The Musical · 8:00 PM"
+    ],
+    "2026-09-06": [
+      "Sep 6 Ghost The Musical · 2:00 PM",
+      "Sep 6 Little Mermaid · 6:00 PM"
+    ],
+    "2026-09-08": [
+      "Sep 8 Ghost The Musical · 2:00 PM",
+      "Sep 8 Ghost The Musical · 7:30 PM"
+    ],
+    "2026-09-09": [
+      "Sep 9 Ghost The Musical · 7:30 PM"
+    ],
+    "2026-09-10": [
+      "Sep 10 Ghost The Musical · 2:00 PM",
+      "Sep 10 Ghost The Musical · 7:30 PM"
+    ],
+    "2026-09-11": [
+      "Sep 11 An Evening with Groucho · 6:00 PM"
+    ],
+    "2026-09-12": [
+      "Sep 12 Ghost The Musical · 7:30 PM"
+    ],
+    "2026-09-13": [
+      "Sep 13 Ghost The Musical · 2:00 PM"
+    ],
+    "2026-09-15": [
+      "Sep 15 Ghost The Musical · 2:00 PM",
+      "Sep 15 Ghost The Musical · 7:30 PM"
+    ],
+    "2026-09-16": [
+      "Sep 16 Ghost The Musical · 7:30 PM"
+    ],
+    "2026-09-17": [
+      "Sep 17 Ghost The Musical · 7:30 PM"
+    ],
+    "2026-09-18": [
+      "Sep 18 Ghost The Musical · 7:30 PM"
+    ],
+    "2026-09-19": [
+      "Sep 19 Ghost The Musical · 7:30 PM"
+    ],
+    "2026-09-20": [
+      "Sep 20 Ghost The Musical · 2:00 PM"
+    ],
+    "2026-09-23": [
+      "Sep 23 Vanities: The Musical · 2:00 PM",
+      "Sep 23 Vanities: The Musical · 7:30 PM"
+    ],
+    "2026-09-24": [
+      "Sep 24 Vanities: The Musical · 2:00 PM",
+      "Sep 24 Vanities: The Musical · 7:30 PM"
+    ],
+    "2026-09-25": [
+      "Sep 25 Comedy night · 7:30 PM"
+    ],
+    "2026-09-26": [
+      "Sep 26 Vanities: The Musical · 7:30 PM"
+    ],
+    "2026-09-27": [
+      "Sep 27 Vanities: The Musical · 2:00 PM"
+    ],
+    "2026-09-29": [
+      "Sep 29 Vanities: The Musical · 2:00 PM"
+    ],
+    "2026-09-30": [
+      "Sep 30 Vanities: The Musical · 2:00 PM"
+    ],
+    "2026-10-01": [
+      "Oct 1 Vanities: The Musical · 2:00 PM",
+      "Oct 1 Vanities: The Musical · 7:30 PM"
+    ],
+    "2026-10-02": [
+      "Oct 2 Vanities: The Musical · 7:30 PM"
+    ],
+    "2026-10-03": [
+      "Oct 3 Vanities: The Musical · 7:30 PM"
+    ],
+    "2026-10-04": [
+      "Oct 4 Vanities: The Musical · 2:00 PM"
+    ],
+    "2026-10-07": [
+      "Oct 7 Deceived · 2:00 PM",
+      "Oct 7 Deceived · 7:30 PM"
+    ],
+    "2026-10-08": [
+      "Oct 8 Deceived · 2:00 PM",
+      "Oct 8 Deceived · 7:30 PM"
+    ],
+    "2026-10-09": [
+      "Oct 9 Deceived · 7:30 PM"
+    ],
+    "2026-10-10": [
+      "Oct 10 Deceived · 7:30 PM"
+    ],
+    "2026-10-11": [
+      "Oct 11 Deceived · 2:00 PM"
+    ],
+    "2026-11-07": [
+      "Nov 7 Comedy Night - Fundraiser for BHVFC · 7:30 PM"
+    ],
+    "2026-11-22": [
+      "Nov 22 Holidays with The Duprees · 2:00 PM"
+    ],
+    "2026-11-28": [
+      "Nov 28 Holiday Inn · 2:00 PM",
+      "Nov 28 Holiday Inn · 7:30 PM"
+    ],
+    "2026-11-29": [
+      "Nov 29 Holiday Inn · 2:00 PM"
+    ],
+    "2026-12-02": [
+      "Dec 2 Holiday Inn · 2:00 PM"
+    ],
+    "2026-12-03": [
+      "Dec 3 Holiday Inn · 2:00 PM"
+    ],
+    "2026-12-04": [
+      "Dec 4 Holiday Inn · 7:30 PM"
+    ],
+    "2026-12-05": [
+      "Dec 5 Holiday Inn · 2:00 PM",
+      "Dec 5 Holiday Inn · 7:30 PM"
+    ],
+    "2026-12-06": [
+      "Dec 6 Holiday Inn · 2:00 PM"
+    ],
+    "2026-12-08": [
+      "Dec 8 Holiday Inn · 2:00 PM"
+    ],
+    "2026-12-10": [
+      "Dec 10 Holiday Inn · 2:00 PM"
+    ],
+    "2026-12-11": [
+      "Dec 11 Holiday Inn · 7:30 PM"
+    ],
+    "2026-12-12": [
+      "Dec 12 Holiday Inn · 2:00 PM",
+      "Dec 12 Holiday Inn · 7:30 PM"
+    ],
+    "2026-12-13": [
+      "Dec 13 Holiday Inn · 2:00 PM"
+    ],
+    "2026-12-16": [
+      "Dec 16 Holiday Inn · 2:00 PM"
+    ],
+    "2026-12-17": [
+      "Dec 17 Holiday Inn · 2:00 PM"
+    ],
+    "2026-12-18": [
+      "Dec 18 Holiday Inn · 7:30 PM"
+    ],
+    "2026-12-19": [
+      "Dec 19 Holiday Inn · 2:00 PM",
+      "Dec 19 Holiday Inn · 7:30 PM"
+    ],
+    "2026-12-20": [
+      "Dec 20 Holiday Inn · 2:00 PM"
+    ],
+    "2026-12-31": [
+      "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
+      "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
+    ],
+    "2026-08-09": [
+      "Aug 9 Cinderella · 6:00 PM",
+      "Aug 9 Pretty Woman: The Musical · 2:00 PM"
+    ],
+    "2026-08-08": [
+      "Aug 8 Pretty Woman: The Musical · 8:00 PM",
+      "Aug 8 Cinderella · 6:00 PM"
+    ],
+    "2026-08-07": [
+      "Aug 7 Comedy Night · 8:30 PM",
+      "Aug 7 Cinderella · 6:00 PM"
+    ],
+    "2026-08-06": [
+      "Aug 6 Pretty Woman: The Musical · 8:00 PM",
+      "Aug 6 Cinderella · 6:00 PM",
+      "Aug 6 Pretty Woman: The Musical · 2:00 PM"
+    ],
+    "2026-08-05": [
+      "Aug 5 Pretty Woman: The Musical · 8:00 PM",
+      "Aug 5 Cinderella · 6:00 PM"
+    ],
+    "2026-08-04": [
+      "Aug 4 Pretty Woman: The Musical · 8:00 PM",
+      "Aug 4 Pretty Woman: The Musical · 2:00 PM"
+    ],
+    "2026-08-03": [
+      "Aug 3 Back to the Garden 1969 - The Woodstock Experience · 8:00 PM",
+      "Aug 3 Back to the Garden 1969 - The Woodstock Experience · 5:00 PM"
+    ],
+    "2026-08-02": [
+      "Aug 2 Little Mermaid · 6:00 PM",
+      "Aug 2 Pretty Woman: The Musical · 2:00 PM"
+    ],
+    "2026-08-01": [
+      "Aug 1 Pretty Woman: The Musical · 8:00 PM",
+      "Aug 1 Little Mermaid · 6:00 PM"
+    ],
+    "2026-07-31": [
+      "Jul 31 Pretty Woman: The Musical · 8:00 PM",
+      "Jul 31 Little Mermaid · 6:00 PM"
+    ],
+    "2026-07-30": [
+      "Jul 30 Pretty Woman: The Musical · 8:00 PM",
+      "Jul 30 Little Mermaid · 6:00 PM",
+      "Jul 30 Pretty Woman: The Musical · 2:00 PM"
+    ],
+    "2026-07-29": [
+      "Jul 29 Pretty Woman: The Musical · 8:00 PM",
+      "Jul 29 Little Mermaid · 6:00 PM"
+    ],
+    "2026-07-28": [
+      "Jul 28 Pretty Woman: The Musical · 8:00 PM"
+    ],
+    "2026-07-26": [
+      "Jul 26 Aladdin, Jr. · 6:00 PM",
+      "Jul 26 Young Frankenstein · 2:00 PM"
+    ],
+    "2026-07-25": [
+      "Jul 25 Young Frankenstein · 8:00 PM"
+    ]
   },
   "availability": {
-    "summary": "Next available stay · Monday, Aug. 10–Friday, Aug. 14 · Dome Room · Asian Room",
-    "title": "Four nights in Beach Haven",
-    "detail": "The Dome Room and Asian Room are both available Monday through Thursday night.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-10&end_date=2026-08-14&number_of_adults=2&number_of_children=0"
+    "summary": "Next available stay · Tuesday, Aug. 11 · Dome Room · Asian Room",
+    "title": "Plan your next stay",
+    "detail": "Rooms shown are available for arrival on Aug. 11.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-11&end_date=2026-08-12&number_of_adults=2&number_of_children=0"
   }
 }
