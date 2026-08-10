@@ -57,16 +57,17 @@
     .weekly-pick-copy{padding:22px 24px;align-self:center}.weekly-pick-eyebrow{display:block;color:#a34536;font:700 13px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}.weekly-pick h2{margin:6px 0 9px;font:normal 30px/1.1 Georgia,serif}.weekly-pick p{margin:0;color:#35545b;font:17px/1.45 Arial,sans-serif}.weekly-pick a{display:inline-block;margin-top:14px;color:#fff;background:#073c4a;border-radius:10px;padding:11px 15px;text-decoration:none;font:700 16px/1.2 Arial,sans-serif}.weekly-pick figure{margin:0;min-height:205px;background:#173f49}.weekly-pick img{display:block;width:100%;height:100%;min-height:205px;object-fit:cover;object-position:center}
     @media (max-width:620px){.weekly-pick{grid-template-columns:1fr}.weekly-pick figure{min-height:180px;order:-1}.weekly-pick img{min-height:180px}}
   </style>
-  <script>document.addEventListener('DOMContentLoaded',()=>{const grid=document.querySelector('#home .home-grid'),stay=document.querySelector('.return-stay');if(grid&&!document.querySelector('[data-engleside-pick]')){const pick=document.createElement('section');pick.className='weekly-pick';pick.dataset.englesidePick='';pick.setAttribute('aria-label','Top pick of the week');pick.innerHTML='<div class="weekly-pick-copy"><span class="weekly-pick-eyebrow">Top pick of the week</span><h2>Engleside Inn</h2><p>Try their <b>shrimp, lobster &amp; scallops</b> dish — an absolutely delicious classic for a special Beach Haven dinner.</p><a href="https://www.engleside.com/dining/" target="_blank" rel="noopener">Explore Engleside dining →</a></div><figure><img src="engleside-top-pick.png" alt="Shrimp, lobster, and scallops dish at Engleside Inn"></figure>';grid.insertAdjacentElement('beforebegin',pick)}if(stay&&!document.querySelector('[data-howards-favorite]')){const favorite=document.createElement('section');favorite.className='weekly-pick';favorite.dataset.howardsFavorite='';favorite.setAttribute('aria-label','Guest favorite');favorite.innerHTML='<div class="weekly-pick-copy"><span class="weekly-pick-eyebrow">Guest favorite</span><h2>Howard’s Seafood Restaurant</h2><p>Order the <b>horseradish-crusted salmon</b> — baked with a horseradish, lemon, and Dijon crust. A classic LBI dinner in Beach Haven Gardens.</p><a href="https://howardsrestaurant.com/menu" target="_blank" rel="noopener">See Howard’s menu →</a></div><figure><img src="howards-top-pick.jpeg" alt="Dinner at Howard’s Seafood Restaurant"></figure>';stay.insertAdjacentElement('afterend',favorite)}const dining=document.querySelector('#dining .cards'),howards=[...document.querySelectorAll('#dining .card')].find(card=>card.querySelector('h2')?.textContent==='Howard’s Seafood Restaurant');if(dining&&howards)dining.append(howards)})</script>
+  <script>document.addEventListener('DOMContentLoaded',()=>{const home=document.getElementById('home'),grid=document.querySelector('#home .home-grid'),stay=document.querySelector('.return-stay'),storeHome=document.querySelector('.store-home');if(home&&storeHome)home.insertBefore(storeHome,home.firstElementChild);if(grid&&!document.querySelector('[data-engleside-pick]')){const pick=document.createElement('section');pick.className='weekly-pick';pick.dataset.englesidePick='';pick.setAttribute('aria-label','Top pick of the week');pick.innerHTML='<div class="weekly-pick-copy"><span class="weekly-pick-eyebrow">Top pick of the week</span><h2>Engleside Inn</h2><p>Try their <b>shrimp, lobster &amp; scallops</b> dish — an absolutely delicious classic for a special Beach Haven dinner.</p><a href="https://www.engleside.com/dining/" target="_blank" rel="noopener">Explore Engleside dining →</a></div><figure><img src="engleside-top-pick.png" alt="Shrimp, lobster, and scallops dish at Engleside Inn"></figure>';grid.insertAdjacentElement('beforebegin',pick)}if(home&&!document.querySelector('[data-howards-favorite]')){const favorite=document.createElement('section');favorite.className='weekly-pick';favorite.dataset.howardsFavorite='';favorite.setAttribute('aria-label','Guest favorite');favorite.innerHTML='<div class="weekly-pick-copy"><span class="weekly-pick-eyebrow">Guest favorite</span><h2>Howard’s Seafood Restaurant</h2><p>Order the <b>horseradish-crusted salmon</b> — baked with a horseradish, lemon, and Dijon crust. A classic LBI dinner in Beach Haven Gardens.</p><a href="https://howardsrestaurant.com/menu" target="_blank" rel="noopener">See Howard’s menu →</a></div><figure><img src="howards-top-pick.jpeg" alt="Dinner at Howard’s Seafood Restaurant"></figure>';home.append(favorite)}const dining=document.querySelector('#dining .cards'),howards=[...document.querySelectorAll('#dining .card')].find(card=>card.querySelector('h2')?.textContent==='Howard’s Seafood Restaurant');if(dining&&howards)dining.append(howards)})</script>
 </head>
 <body><div class="shell"><header class="mast"><b>Williams Cottage Inn</b><span>Beach Haven · Long Beach Island</span><i>✦</i></header><main>
-  <section id="home" class="screen active"><div class="panel hero"></div><div class="home-grid"><button class="tile" onclick="beginCheckout()"><i>✓</i><b>Check out</b><span>Let us know when you’re heading out</span></button><button class="tile" onclick="show('stay')"><i>⌂</i><b>My stay</b><span>Departure, Wi‑Fi & inn guide</span></button><button class="tile" onclick="show('beach')"><i>☀</i><b>Beach day</b><span>Towels, chairs & badges</span></button><button class="tile" onclick="show('explore')"><i>⌖</i><b>Explore</b><span>Beach Haven ideas</span></button><button class="tile" onclick="show('history')"><i>✦</i><b>Our history</b><span>The Onion Dome story</span></button><button class="tile" onclick="beginBreakfast()"><i>☕</i><b>Breakfast</b><span>Choose your time</span></button><button class="tile" onclick="beginDance()"><i>♩</i><b>7:30 AM dance</b><span>Mon · Tue · Wed · Fri</span></button></div><button class="store-home" onclick="show('store')"><span>NEW · Cottage provisions</span><b>Stay well at the cottage</b><em>Stay hydrated · Stay nourished · Sleep soundly</em></button><div class="home-quote"><p><span id="dailyQuote"></span><br><span id="dailyQuoteSource"></span></p></div><button class="quiet home-survey" onclick="beginSurvey()">✦ Share guest feedback</button><section class="return-stay" aria-label="Plan your next stay"><span class="return-eyebrow">Plan your next stay</span><h2>Beach Haven is calling.</h2><p>Tuesday, August 4 · Opulent · Aviary · Asian · Dome</p><small>Availability checked August 2 and can change quickly.</small><a class="return-book" href="https://www.williamscottageinn.com/" target="_blank" rel="noopener">View calendar &amp; book at WilliamsCottageInn.com →</a><div class="return-event"><a href="https://www.williamscottageinn.com/the-dome-room.htm" target="_blank" rel="noopener">A special one-night stay · The Dome Room · August 3</a><span>Did you know? Its ocean-view windows are over seven feet tall.</span></div><div class="return-event"><a href="https://www.bhchowdercookoff.com/" target="_blank" rel="noopener">Beach Haven Chowder Cook-Off · October 3–4</a><span>Merchant Mart Saturday · ticketed Cook-Off Sunday.</span></div></section></section>
+  <section id="home" class="screen active"><div class="panel hero"></div><div class="home-grid"><button class="tile" onclick="beginCheckout()"><i>✓</i><b>Check out</b><span>Let us know when you’re heading out</span></button><button class="tile" onclick="show('stay')"><i>⌂</i><b>My stay</b><span>Departure, Wi‑Fi & inn guide</span></button><button class="tile" onclick="show('beach')"><i>☀</i><b>Beach day</b><span>Towels, chairs & badges</span></button><button class="tile" onclick="show('explore')"><i>⌖</i><b>Explore</b><span>Beach Haven ideas</span></button><button class="tile" onclick="show('history')"><i>✦</i><b>Our history</b><span>The Onion Dome story</span></button><button class="tile" onclick="beginCheckin()"><i>⌂</i><b>Check in</b><span>Room & breakfast details</span></button></div><button class="store-home" onclick="show('store')"><span>NEW · Cottage provisions</span><b>Stay well at the cottage</b><em>Stay hydrated · Stay nourished · Sleep soundly</em></button><div class="home-quote"><p><span id="dailyQuote"></span><br><span id="dailyQuoteSource"></span></p></div><button class="quiet home-survey" onclick="beginSurvey()">✦ Share guest feedback</button><p class="home-guestbook">Before you go, don’t forget to sign our guestbook. Loved your stay? <a href="https://www.tripadvisor.com/Hotel_Review-g46292-d673202-Reviews-Williams_Cottage_Inn-Beach_Haven_Long_Beach_Island_New_Jersey.html" target="_blank" rel="noopener">Leave a TripAdvisor review</a>.</p><section class="return-stay" aria-label="Plan your next stay"><span class="return-eyebrow">Plan your next stay</span><h2>Beach Haven is calling.</h2><p>Tuesday, August 4 · Opulent · Aviary · Asian · Dome</p><small>Availability checked August 2 and can change quickly.</small><a class="return-book" href="https://www.williamscottageinn.com/" target="_blank" rel="noopener">View calendar &amp; book at WilliamsCottageInn.com →</a><div class="return-event"><a href="https://www.williamscottageinn.com/the-dome-room.htm" target="_blank" rel="noopener">A special one-night stay · The Dome Room · August 3</a><span>Did you know? Its ocean-view windows are over seven feet tall.</span></div><div class="return-event"><a href="https://www.bhchowdercookoff.com/" target="_blank" rel="noopener">Beach Haven Chowder Cook-Off · October 3–4</a><span>Merchant Mart Saturday · ticketed Cook-Off Sunday.</span></div></section></section>
   <section id="select-room" class="screen"><div class="panel page"><button class="back" onclick="show('home')">← Home</button><div class="heading"><h1 id="roomTitle">Which room are you in?</h1></div><div class="options" id="rooms"></div></div></section>
+  <section id="checkin-details" class="screen"><div class="panel page"><button class="back" onclick="beginCheckin()">← Change room</button><div class="heading"><h1>Check in</h1><p id="checkinRoom"></p></div><div id="checkinForm"></div></div></section>
   <section id="dance" class="screen"><div class="panel page"><button class="back" onclick="show('home')">← Home</button><div class="heading"><h1>7:30 AM dance class</h1><p>Sign-ups close two days before class.</p></div><div class="options" id="danceDates"></div></div></section>
   <section id="breakfast-time" class="screen"><div class="panel page"><button class="back" onclick="show('select-room')">← Change room</button><div class="heading"><h1>Breakfast time</h1><p id="breakfastRoomText"></p></div><div class="options"><button class="option" onclick="pick(this,'time','9:00 AM')">9:00 AM</button><button class="option" onclick="pick(this,'time','10:00 AM')">10:00 AM</button></div><div class="footer-row"><span class="step">Step 2 of 3</span><button class="primary" id="timeNext" disabled onclick="show('breakfast-diet')">Continue</button></div></div></section>
   <section id="breakfast-diet" class="screen"><div class="panel page"><button class="back" onclick="show('breakfast-time')">← Back</button><div class="heading"><h1>Dietary preferences</h1><p>Please select the closest option. Add any important detail below.</p></div><div class="options"><button class="option" onclick="pick(this,'diet','No dietary restrictions')">No dietary<br>restrictions</button><button class="option" onclick="pick(this,'diet','Gluten-free')">Gluten-free</button><button class="option" onclick="pick(this,'diet','Vegan')">Vegan</button></div><label class="field" for="dietNote">Anything else we should know?</label><textarea id="dietNote" class="text-area" maxlength="300" placeholder="Optional dietary note"></textarea><div class="footer-row"><span class="step">Step 3 of 3</span><button class="primary" id="dietNext" disabled onclick="sendBreakfast()">Confirm breakfast</button></div></div></section>
   <section id="request-type" class="screen"><div class="panel page"><button class="back" onclick="show('select-room')">← Back</button><div class="heading"><h1>How can we help?</h1><p>Select a request, then add a detail if helpful.</p></div><div class="options"><button class="option" onclick="pick(this,'request','Extra towels')">Extra towels</button><button class="option" onclick="pick(this,'request','Room assistance')">Room assistance</button><button class="option" onclick="pick(this,'request','Breakfast question')">Breakfast question</button><button class="option" onclick="pick(this,'request','Forgot something')">Forgot something</button><button class="option" onclick="pick(this,'request','Local recommendation')">Local recommendation</button><button class="option" onclick="pick(this,'request','Other assistance')">Other assistance</button></div><label class="field" for="requestNote">A little more detail</label><textarea id="requestNote" class="text-area" maxlength="300" placeholder="Optional — e.g., two towels, sunscreen, a restaurant recommendation"></textarea><div class="footer-row"><span class="step">Step 2 of 2</span><button class="primary" id="requestNext" disabled onclick="sendRequest()">Send request</button></div><div class="notice"><b>Urgent?</b> Use the phone at the front desk or call <span id="phoneInline"></span>.</div></div></section>
-  <section id="store" class="screen"><div class="panel page"><button class="back" onclick="show('home')">← Home</button><div class="heading store-heading"><span>NEW · Cottage provisions</span><h1>Stay well at the cottage</h1><p>Stay hydrated · Stay nourished · Sleep soundly</p></div><div id="storeContent"></div></div></section>
+  <section id="store" class="screen"><div class="panel page"><button class="back" onclick="show('home')">← Home</button><div class="heading store-heading"><h1>Stay well at the cottage</h1><p>Stay hydrated · Stay nourished · Sleep soundly</p></div><button class="store-dance" onclick="beginDance()"><b>7:30 AM dance class</b><span>Sign up at least two days ahead · Monday, Tuesday, Wednesday &amp; Friday</span></button><div id="storeContent"></div></div></section>
   <section id="stay" class="screen"><div class="panel page"><button class="back" onclick="show('home')">← Home</button><div class="heading"><h1>My stay</h1><p>Helpful details while you make yourself at home.</p></div><div class="cards"><article class="card"><h2>Departure</h2><p>Check-out is by <b>11:00 AM</b>. When you are ready to leave, use the Check out tile and leave your key at the front desk.</p><p><button class="quiet" onclick="beginCheckout()">Check out now</button></p></article><article class="card"><h2>Wi‑Fi</h2><p>See the card beside the iPad for the Wi‑Fi details and bike-lock combination.</p></article><article class="card"><h2>Parlor, anytime</h2><p>Enjoy the communal refrigerator, coffee and tea station, water cooler, glassware, corkscrews, ice buckets, television, and games.</p></article><article class="card"><h2>Your room</h2><p>Your room includes a private bath, television, and mini-refrigerator.</p></article></div></div></section>
   <section id="beach" class="screen"><div class="panel page"><button class="back" onclick="show('home')">← Home</button><div class="heading"><h1>Beach day</h1><p>The beach is only steps away.</p></div><div class="cards"><article class="card"><h2>Beach badges</h2><p>Beach badges are available at check-in. Please keep them with you while you enjoy the beach.</p></article><article class="card"><h2>Beach towels</h2><p>Beach towels are in the closet to the left, just before the front-door exit.</p></article><article class="card"><h2>Beach chairs</h2><p>Beach chairs are in the backyard, beside the outdoor shower.</p></article><article class="card"><h2>Boogie boards & umbrellas</h2><p>Boogie boards and beach umbrellas are available in the outdoor bin.</p></article><article class="card"><h2>After the beach</h2><p>Please rinse your feet at the outdoor shower before coming inside. You are welcome to hang your beach towels outside to dry and help keep sand out of the inn.</p></article><article class="card"><h2>Please care for shared items</h2><p>After use, please wipe down chairs, boogie boards, or umbrellas with a towel. Shake the towel out and hang it outside, or rinse the item and leave it outside to dry.</p></article></div></div></section>
   <section id="explore" class="screen"><div class="panel page"><button class="back" onclick="show('home')">← Home</button><div class="heading"><h1>Beach Haven guide</h1></div><div class="notice"><b>Today & tomorrow</b><br>See what is playing at Surflight Theatre and a few timely island ideas before you head out.</div><div class="options" style="margin-top:20px"><button class="option" onclick="show('activities')">Things to do</button><button class="option" onclick="show('dining')">Places to eat</button></div><div class="cards" style="display:none"></div></div></section>
@@ -118,7 +119,30 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
   .sleep-well{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(210px,.85fr);gap:18px;align-items:center;margin:0 0 12px;padding:17px 19px;border:1px solid #b9d2ca;border-radius:16px;background:linear-gradient(120deg,#fffdf7,#e8f1ec);color:#102f38;box-shadow:0 6px 15px #061a2015}.sleep-well-copy{padding:3px 4px}.sleep-well-eyebrow,.market-label{display:block;color:#7a281f;font:700 13px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}.sleep-well h2{margin:5px 0 7px;font:normal 28px/1.08 Georgia,serif}.sleep-well p{margin:0;font:18px/1.35 Arial,sans-serif;color:#35545b}.sleep-well figure{margin:0;min-height:190px;border-radius:11px;overflow:hidden}.sleep-well .sleep-product img{display:block;width:100%;height:100%;min-height:190px;object-fit:cover;object-position:center}.cottage-market{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:0 0 12px}.market-heading,.market-item.bottles,.juice-market,.price-list,.vote-card{grid-column:1/-1}.market-heading{padding:5px 2px 1px;text-align:center}.market-heading h2{margin:3px 0;font:normal 30px/1.1 Georgia,serif}.market-heading p{margin:0;color:#35545b;font:17px/1.35 Arial,sans-serif}.store-new{display:inline-block;padding:4px 9px;border-radius:999px;background:#7a281f;color:#fff;font:700 11px Arial,sans-serif;letter-spacing:.08em}.market-item{padding:17px 19px;border:1px solid #b9d2ca;border-radius:16px;background:#fffdf7;box-shadow:0 5px 13px #061a2012}.market-item h2{margin:5px 0 7px;font:normal 25px/1.1 Georgia,serif}.market-item p{margin:0;font:17px/1.35 Arial,sans-serif;color:#35545b}.market-item.bottles{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px;align-items:center;background:linear-gradient(120deg,#fffdf7,#e8f1f3)}.bottle-photo{height:250px;margin:0;border-radius:11px;overflow:hidden;background:#fff}.bottle-photo img{display:block;width:100%;height:100%;object-fit:contain}.juice-market{padding:17px 19px;border:1px solid #b9d2ca;border-radius:16px;background:linear-gradient(120deg,#fffdf7,#f2f7e9);box-shadow:0 5px 13px #061a2012}.juice-market h2{margin:5px 0 4px;font:normal 25px/1.1 Georgia,serif}.juice-market>p{margin:0;color:#35545b;font:17px/1.35 Arial,sans-serif}.juice-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:13px}.juice-choice{padding:10px;border:1px solid #ccd9c9;border-radius:12px;background:#fffefa;text-align:center}.juice-choice img{display:block;width:100%;height:142px;object-fit:contain}.juice-choice h3{margin:4px 0;font:normal 18px/1.08 Georgia,serif}.juice-choice p{min-height:40px;margin:0;color:#35545b;font:14px/1.3 Arial,sans-serif}.price-list{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0;margin:2px 0;padding:12px 16px;border:1px solid #cbb27e;border-radius:16px;background:#fff8e8;color:#573e17;font:16px/1.35 Arial,sans-serif}.price-list strong{font:normal 21px Georgia,serif}.price-list span{padding:0 13px;border-left:1px solid #cbb27e}.price-list span:first-of-type{border-left:0}.vote-card{padding:15px 18px;border:1px dashed #9aa9a5;border-radius:16px;background:#fffefa;text-align:center}.vote-card h2{margin:3px 0 6px;font:normal 24px Georgia,serif}.vote-card p{margin:0 0 10px;color:#35545b;font:16px/1.35 Arial,sans-serif}.vote-row{display:flex;gap:8px;max-width:620px;margin:auto}.vote-row input{flex:1;min-width:0;padding:11px;border:1px solid #9aa9a5;border-radius:9px;font:16px Arial,sans-serif}.vote-row button{padding:10px 14px;border:0;border-radius:9px;background:#7a281f;color:#fff;font:bold 15px Arial,sans-serif}.vote-thanks{min-height:20px;margin-top:8px;color:#17656a;font:bold 15px Arial,sans-serif}@media(max-width:680px){.sleep-well,.cottage-market{grid-template-columns:1fr}.sleep-well figure,.sleep-well .sleep-product img{min-height:220px}.market-item.bottles{grid-template-columns:1fr}.bottle-photo{height:300px}.juice-grid{grid-template-columns:repeat(2,1fr)}.juice-choice img{height:175px}.price-list{display:block;text-align:center}.price-list strong,.price-list span{display:block;padding:4px 0;border-left:0}.vote-row{display:block}.vote-row button{margin-top:8px;width:100%}}
 </style>
 <style>
-  .store-home{display:block;width:100%;margin:12px 0 0;padding:16px 20px;border:1px solid #cbb27e;border-radius:16px;background:linear-gradient(120deg,#fff8e8,#e8f1ec);color:#173740;text-align:center}.store-home span{display:block;color:#7a281f;font:700 12px Arial,sans-serif;letter-spacing:.12em}.store-home b{display:block;margin:4px 0;font:normal 28px Georgia,serif}.store-home em{display:block;color:#35545b;font:17px Arial,sans-serif;font-style:normal}.store-heading{text-align:center}.store-heading>span{display:inline-block;padding:4px 9px;border-radius:999px;background:#7a281f;color:#fff;font:700 11px Arial,sans-serif;letter-spacing:.08em}.store-heading h1{color:#102f38!important}.store-heading p{display:block!important;color:#35545b!important;font-size:19px!important}.well-showcase{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 14px}.well-showcase figure{margin:0;padding:12px;border:1px solid #b9d2ca;border-radius:16px;background:#fffefa;text-align:center}.well-showcase img{display:block;width:100%;height:250px;object-fit:contain;border-radius:10px}.well-showcase figcaption{margin-top:8px;color:#173740;font:normal 22px Georgia,serif}.store-product-summary{grid-column:1/-1;padding:17px 19px;border:1px solid #b9d2ca;border-radius:16px;background:linear-gradient(120deg,#fffdf7,#e8f1f3);box-shadow:0 5px 13px #061a2012}.store-product-summary h2{margin:5px 0 7px;font:normal 25px Georgia,serif}.store-product-summary p{margin:0;color:#35545b;font:17px/1.35 Arial,sans-serif}@media(max-width:680px){.well-showcase{grid-template-columns:1fr}.well-showcase img{height:280px}}
+  /* Keep the home screen calm: the detail lives one tap deeper. */
+  #home .home-grid{gap:9px;margin-top:10px}#home .tile{min-height:88px;padding:10px 14px}#home .tile i{font-size:20px;margin-bottom:2px}#home .tile b{font-size:22px}#home .tile span{display:none}.store-home{margin-top:10px;padding:12px 18px}.store-home span{font-size:11px}.store-home b{font-size:24px}.store-home em{font-size:15px}.home-quote{margin-top:12px!important;padding:11px 16px!important}.home-quote p{font-size:17px!important}.home-survey{margin-top:10px!important;padding:11px 16px!important;font-size:17px!important}.home-guestbook{margin:9px 0 13px;text-align:center;color:#dcebe6;font:15px/1.4 Arial,sans-serif}.home-guestbook a{color:#fff4cb;font-weight:bold;text-underline-offset:3px}
+  .store-home{display:block;width:100%;margin:12px 0 0;padding:16px 20px;border:1px solid #cbb27e;border-radius:16px;background:linear-gradient(120deg,#fff8e8,#e8f1ec);color:#173740;text-align:center}.store-home span{display:block;color:#7a281f;font:700 12px Arial,sans-serif;letter-spacing:.12em}.store-home b{display:block;margin:4px 0;font:normal 28px Georgia,serif}.store-home em{display:block;color:#35545b;font:17px Arial,sans-serif;font-style:normal}.store-heading{text-align:center}.store-heading h1{color:#102f38!important}.store-heading p{display:block!important;color:#35545b!important;font-size:19px!important}.store-dance{display:block;width:100%;margin:0 0 14px;padding:15px 18px;border:1px solid #b9d2ca;border-radius:15px;background:#e8f1ec;color:#173740;text-align:center}.store-dance b{display:block;font:normal 24px Georgia,serif}.store-dance span{display:block;margin-top:4px;color:#35545b;font:16px Arial,sans-serif}.well-showcase{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 14px}.well-showcase figure{margin:0;padding:12px;border:1px solid #b9d2ca;border-radius:16px;background:#fffefa;text-align:center}.well-showcase img{display:block;width:100%;height:250px;object-fit:contain;border-radius:10px}.well-showcase figcaption{margin-top:10px;color:#173740;font:normal 22px Georgia,serif}.well-showcase figcaption span{display:block;margin-top:5px;color:#35545b;font:16px/1.35 Arial,sans-serif}.store-product-summary{grid-column:1/-1;padding:17px 19px;border:1px solid #b9d2ca;border-radius:16px;background:linear-gradient(120deg,#fffdf7,#e8f1f3);box-shadow:0 5px 13px #061a2012}.store-product-summary h2{margin:5px 0 7px;font:normal 25px Georgia,serif}.store-product-summary p{margin:0;color:#35545b;font:17px/1.35 Arial,sans-serif}@media(max-width:680px){.well-showcase{grid-template-columns:1fr}.well-showcase img{height:280px}}
+</style>
+<script>
+  /* Final compact home-screen overrides. */
+  document.addEventListener('DOMContentLoaded',()=>{document.querySelector('#home .home-grid')?.classList.add('compact-home-grid')});
+</script>
+<style>
+  #home .home-grid.compact-home-grid{gap:9px;margin-top:10px}#home .tile{min-height:88px;padding:10px 14px}#home .tile i{font-size:20px;margin-bottom:2px}#home .tile b{font-size:22px}#home .tile span{display:none}.store-home{margin-top:10px;padding:13px 18px;border-color:#ffffff52;background:transparent;color:#fffaf0;box-shadow:none}.store-home span{color:#d9bb78;font-size:11px}.store-home b{font-size:24px}.store-home em{color:#dcebe6;font-size:15px}.home-quote{margin-top:12px!important;padding:11px 16px!important}.home-quote p{font-size:17px!important}.home-survey{margin-top:10px!important;padding:11px 16px!important;font-size:17px!important}.well-showcase figure{border:0;box-shadow:0 9px 22px #1737401f}.well-showcase figure:first-child{background:linear-gradient(135deg,#fcf6ec 0%,#eadde4 55%,#d8e7e1 100%)}.well-showcase figure:nth-child(2){background:linear-gradient(135deg,#edf4f0 0%,#d9e8ef 55%,#f8e9da 100%)}.well-showcase figcaption{margin:0 -12px -12px;padding:13px 14px 15px;border-radius:0 0 16px 16px;background:#ffffffa8;backdrop-filter:blur(5px)}
+</style>
+<style>
+  /* A warm invitation on the home screen; the green palette belongs inside the shop. */
+  #home .store-home{border-color:#c7a56b;background:linear-gradient(120deg,#f7ead2 0%,#ead0a2 52%,#f9f0df 100%);color:#243d3e;box-shadow:0 7px 17px #061a2024}
+  #home .store-home span{color:#7a4f1d}#home .store-home em{color:#4d5b50}
+  #store .panel{background:linear-gradient(145deg,#f7fbf5 0%,#e1eee5 50%,#f7f0df 100%)}
+  #store .heading{border-color:#b8cebf}
+</style>
+<style>
+  /* Restore the helpful one-line labels on the home choices. */
+  #home .tile{min-height:118px}
+  #home .tile span{display:block;margin-top:5px;font-size:15px;line-height:1.3}
+  #home .tile[onclick="beginCheckin()"] span{font-size:0}
+  #home .tile[onclick="beginCheckin()"] span::after{content:'Select breakfast preferences';font-size:15px;line-height:1.3}
 </style>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -130,13 +154,13 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
     const feature = document.createElement('section');
     feature.className = 'well-showcase';
     feature.setAttribute('aria-label', 'Stay well collection');
-    feature.innerHTML = '<figure><img src="sleep-well-organza-set.png" alt="Williams Cottage sleep set in a white organza bag with two black eye masks and earplugs"><figcaption>Sleep soundly</figcaption></figure><figure><img src="thermoflask-black-pink.png" alt="Black and pink ThermoFlask 32 ounce insulated water bottles"><figcaption>Stay hydrated</figcaption></figure>';
+    feature.innerHTML = '<figure><img src="sleep-well-organza-set.png" alt="Williams Cottage sleep set in a white organza bag with two black eye masks and earplugs"><figcaption>Sleep soundly<span>Two satin eye masks and two pairs of reusable earplugs, tucked in a sheer white organza bag.</span></figcaption></figure><figure><img src="thermoflask-black-pink.png" alt="Black and pink ThermoFlask 32 ounce insulated water bottles"><figcaption>Stay hydrated<span>Leakproof 32 oz insulated stainless-steel water bottles, in black or pink.</span></figcaption></figure>';
     store.append(feature);
     }
     const market = document.createElement('section');
     market.className = 'cottage-market';
     market.setAttribute('aria-label', 'Cottage market');
-    market.innerHTML = '<article class="store-product-summary"><span class="market-label">Stay hydrated</span><h2>ThermoFlask · 32 oz</h2><p>Leakproof, insulated stainless-steel water bottles in black or pink.</p></article><article class="juice-market"><span class="market-label">Stay nourished</span><h2>Pressed Juicery Smoothies</h2><p>Cold-pressed, refrigerated smoothies — an easy morning-after refresh after a late Beach Haven night.</p><div class="juice-grid"><article class="juice-choice"><img src="juice-acai-berry.png" alt="Pressed Juicery Açaí Berry wellness smoothie"><h3>Açaí Berry</h3><p>Berry-forward and a bright, refreshing pick.</p></article><article class="juice-choice"><img src="juice-strawberry-orange-mango.png" alt="Pressed Juicery Strawberry Orange Mango wellness smoothie"><h3>Strawberry Orange Mango</h3><p>Fresh fruit flavor with a vitamin C boost.</p></article><article class="juice-choice"><img src="juice-tropical.png" alt="Pressed Juicery Tropical wellness smoothie"><h3>Tropical</h3><p>Pineapple, apple, mango, and banana.</p></article><article class="juice-choice"><img src="juice-greens.png" alt="Pressed Juicery Greens wellness smoothie"><h3>Greens</h3><p>Apple, banana, avocado, spinach, and kale.</p></article></div></article><aside class="price-list" aria-label="Cottage provisions price list"><strong>Cottage provisions</strong><span>ThermoFlask · $30</span><span>Pressed Juicery Smoothie · $10</span><span>Sleep Set · $15</span></aside><section class="vote-card"><h2>What should we stock next?</h2><p>Vote for a future cottage provision.</p><div class="vote-row"><input id="storeVote" maxlength="100" placeholder="Your idea — snacks, sunscreen, something else"><button type="button" id="storeVoteSubmit">Submit idea</button></div><div id="storeVoteThanks" class="vote-thanks" aria-live="polite"></div></section>';
+    market.innerHTML = '<article class="juice-market"><span class="market-label">Stay nourished</span><h2>Pressed Juicery Smoothies</h2><p>Cold-pressed, refrigerated smoothies — an easy morning-after refresh after a late Beach Haven night.</p><div class="juice-grid"><article class="juice-choice"><img src="juice-acai-berry.png" alt="Pressed Juicery Açaí Berry wellness smoothie"><h3>Açaí Berry</h3><p>Berry-forward and a bright, refreshing pick.</p></article><article class="juice-choice"><img src="juice-strawberry-orange-mango.png" alt="Pressed Juicery Strawberry Orange Mango wellness smoothie"><h3>Strawberry Orange Mango</h3><p>Fresh fruit flavor with a vitamin C boost.</p></article><article class="juice-choice"><img src="juice-tropical.png" alt="Pressed Juicery Tropical wellness smoothie"><h3>Tropical</h3><p>Pineapple, apple, mango, and banana.</p></article><article class="juice-choice"><img src="juice-greens.png" alt="Pressed Juicery Greens wellness smoothie"><h3>Greens</h3><p>Apple, banana, avocado, spinach, and kale.</p></article></div></article><aside class="price-list" aria-label="Cottage provisions price list"><strong>Cottage provisions</strong><span>ThermoFlask · $30</span><span>Pressed Juicery Smoothie · $10</span><span>Sleep Set · $15</span></aside><section class="vote-card"><h2>What should we stock next?</h2><p>Vote for a future cottage provision.</p><div class="vote-row"><input id="storeVote" maxlength="100" placeholder="Your idea — snacks, sunscreen, something else"><button type="button" id="storeVoteSubmit">Submit idea</button></div><div id="storeVoteThanks" class="vote-thanks" aria-live="polite"></div></section>';
     store.append(market);
     document.getElementById('storeVoteSubmit')?.addEventListener('click',()=>{const input=document.getElementById('storeVote'),idea=input?.value.trim();if(!idea)return;const votes=JSON.parse(localStorage.getItem('wciStoreVotes')||'[]');votes.unshift({idea,created:new Date().toISOString()});localStorage.setItem('wciStoreVotes',JSON.stringify(votes));input.value='';document.getElementById('storeVoteThanks').textContent='Thank you — your idea has been saved.'});
   });
@@ -155,12 +179,73 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
         if ([1, 2, 3, 5].includes(date.getDay())) choices.push(formatDanceDate(date));
       }
       const list = document.getElementById('danceDates');
-      list.innerHTML = choices.map(date => `<button class="option" data-dance-date="${date}">${date}<br><small>7:30 AM</small></button>`).join('');
+      list.innerHTML = choices.map(date => `<button class="option" data-dance-date="${date}">${date}</button>`).join('');
       list.querySelectorAll('button').forEach(button => button.onclick = () => {
         newItem('Dance class', `7:30 AM · ${button.dataset.danceDate}`);
         showConfirmation('You’re signed up for dance.', `${state.room} · ${button.dataset.danceDate} at 7:30 AM.`);
       });
       show('dance');
+    };
+  });
+</script>
+<style>
+  .checkin-section{margin:0 0 22px}.checkin-section h2{margin:0 0 10px;font:normal 25px Georgia,serif;color:#173740}.checkin-section>p{margin:0 0 10px;color:#526366;font:16px/1.4 Arial,sans-serif}.checkin-options{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.checkin-options button{min-height:57px;padding:10px;border:1px solid #c9d8d2;border-radius:11px;background:#f0f5f2;color:#173740;font:16px/1.2 Arial,sans-serif}.checkin-options button.selected{border-color:#103f4b;background:#103f4b;color:#fff}.checkin-guests{display:grid;gap:12px}.checkin-guest{padding:15px;border:1px solid #d8e1dc;border-radius:14px;background:#fffefa}.checkin-guest h2{margin:0 0 13px;font-size:22px}.checkin-guest label{display:block;margin:12px 0 7px;color:#526366;font:bold 13px Arial,sans-serif;text-transform:uppercase;letter-spacing:.06em}.checkin-guest .checkin-options{grid-template-columns:repeat(3,1fr)}.checkin-submit{width:100%;margin-top:4px}@media(max-width:680px){.checkin-options{grid-template-columns:1fr}.checkin-guest .checkin-options{grid-template-columns:1fr}.checkin-section h2{font-size:23px}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const afterRoomBeforeCheckin = window.afterRoom;
+    const escapeCheckin = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+    const optionButton = (label, value, selected, action) => `<button type="button" class="${selected === value ? 'selected' : ''}" onclick="${action}">${label}</button>`;
+
+    window.beginCheckin = () => {
+      task = 'checkin';
+      state = {};
+      document.getElementById('roomTitle').textContent = 'Which room are you checking in to?';
+      renderRooms();
+      show('select-room');
+    };
+
+    window.afterRoom = () => {
+      if (task !== 'checkin') return afterRoomBeforeCheckin();
+      state.checkinGuests = state.room === 'The Rose Suite' ? 2 : 2;
+      state.checkinTime = '';
+      state.checkinDrinks = ['Regular coffee', 'Regular coffee'];
+      state.checkinDiets = ['No dietary restrictions', 'No dietary restrictions'];
+      renderCheckin();
+      show('checkin-details');
+    };
+
+    window.renderCheckin = () => {
+      const maxGuests = state.room === 'The Rose Suite' ? 4 : 2;
+      const guestCount = Math.max(1, Math.min(state.checkinGuests || 2, maxGuests));
+      state.checkinGuests = guestCount;
+      state.checkinDrinks = state.checkinDrinks || [];
+      state.checkinDiets = state.checkinDiets || [];
+      while (state.checkinDrinks.length < guestCount) state.checkinDrinks.push('Regular coffee');
+      while (state.checkinDiets.length < guestCount) state.checkinDiets.push('No dietary restrictions');
+      state.checkinDrinks.length = guestCount;
+      state.checkinDiets.length = guestCount;
+
+      document.getElementById('checkinRoom').textContent = state.room.replace(/^The /, '');
+      const times = ['9:00 AM', '9:30 AM', '10:00 AM'];
+      const counts = Array.from({ length: maxGuests }, (_, index) => index + 1);
+      const guests = Array.from({ length: guestCount }, (_, index) => {
+        const drink = state.checkinDrinks[index];
+        const diet = state.checkinDiets[index];
+        return `<article class="checkin-guest"><h2>Guest ${index + 1}</h2><label>Morning drink</label><div class="checkin-options">${['Regular coffee', 'Decaf coffee', 'Tea'].map(value => optionButton(value, value, drink, `setCheckinDrink(${index},'${value}')`)).join('')}</div><label>Dietary needs</label><div class="checkin-options">${['No dietary restrictions', 'Vegan', 'Gluten-free'].map(value => optionButton(value, value, diet, `setCheckinDiet(${index},'${value}')`)).join('')}</div></article>`;
+      }).join('');
+      document.getElementById('checkinForm').innerHTML = `<section class="checkin-section"><h2>Breakfast time</h2><div class="checkin-options">${times.map(value => optionButton(value, value, state.checkinTime, `setCheckinTime('${value}')`)).join('')}</div></section><section class="checkin-section"><h2>Number of guests</h2><p>${maxGuests === 4 ? 'The Rose Suite welcomes up to four guests.' : 'This room welcomes up to two guests.'}</p><div class="checkin-options">${counts.map(value => optionButton(`${value} guest${value === 1 ? '' : 's'}`, value, guestCount, `setCheckinGuests(${value})`)).join('')}</div></section><section class="checkin-section"><h2>Your details</h2><div class="checkin-guests">${guests}</div></section><button class="primary checkin-submit" type="button" onclick="confirmCheckin()">Confirm check in</button>`;
+    };
+    window.setCheckinTime = time => { state.checkinTime = time; renderCheckin(); };
+    window.setCheckinGuests = count => { state.checkinGuests = count; renderCheckin(); };
+    window.setCheckinDrink = (index, drink) => { state.checkinDrinks[index] = drink; renderCheckin(); };
+    window.setCheckinDiet = (index, diet) => { state.checkinDiets[index] = diet; renderCheckin(); };
+    window.confirmCheckin = () => {
+      if (!state.checkinTime) { alert('Please select a breakfast time.'); return; }
+      const guests = Array.from({ length: state.checkinGuests }, (_, index) => `Guest ${index + 1}: ${state.checkinDrinks[index]} · ${state.checkinDiets[index]}`);
+      newItem('Check-in', `${state.checkinTime} breakfast · ${state.checkinGuests} guest${state.checkinGuests === 1 ? '' : 's'}`, guests.join(' | '));
+      newItem('Breakfast', `${state.checkinTime} · ${guests.join(' | ')}`);
+      showConfirmation('You’re checked in.', `${state.room} · breakfast at ${state.checkinTime}.`);
     };
   });
 </script>
@@ -188,5 +273,281 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
     }
   });
 </script>
+<script>
+  /* Use commas and periods instead of long dashes throughout guest-facing copy. */
+  (() => {
+    const tidyLongDashes = root => {
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+        acceptNode: node => /^(SCRIPT|STYLE)$/i.test(node.parentElement?.tagName || '') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT
+      });
+      const nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(node => { if (node.nodeValue.includes('—')) node.nodeValue = node.nodeValue.replace(/—\s*/g, ', '); });
+    };
+    document.addEventListener('DOMContentLoaded', () => {
+      tidyLongDashes(document.body);
+      new MutationObserver(records => records.forEach(record => record.addedNodes.forEach(node => {
+        if (node.nodeType === Node.ELEMENT_NODE) tidyLongDashes(node);
+      }))).observe(document.body, { childList: true, subtree: true });
+    });
+  })();
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const guideOptions = document.querySelector('#explore .options');
+    if (guideOptions && !document.getElementById('museumGuideButton')) {
+      guideOptions.insertAdjacentHTML('beforeend', '<button id="museumGuideButton" class="option" type="button" onclick="show(\'museums\')">Museums</button>');
+    }
+    if (!document.getElementById('museums')) {
+      const screen = document.createElement('section');
+      screen.id = 'museums';
+      screen.className = 'screen';
+      screen.innerHTML = '<div class="panel page"><button class="back" type="button" onclick="show(\'explore\')">← Beach Haven guide</button><div class="heading"><h1>Museums</h1></div><div class="cards"><article class="card"><h2>New Jersey Maritime Museum</h2><p>Explore the maritime history and shipwreck stories of the Jersey Shore in Beach Haven.</p><p><a class="guide-link" href="https://njmaritimemuseum.org/" target="_blank" rel="noopener">Plan your visit</a></p></article><article class="card"><h2>Long Beach Island Historical Museum</h2><p>Discover the people, places, and stories that shaped LBI and Beach Haven.</p><p><a class="guide-link" href="https://www.lbihistoricalmuseum.org/" target="_blank" rel="noopener">Plan your visit</a></p></article></div></div>';
+      document.querySelector('main').append(screen);
+    }
+  });
+</script>
+<style>
+  #home .home-guestbook{margin:10px 0 14px;padding:15px 20px;border:1px solid #d3b576;border-radius:14px;background:linear-gradient(120deg,#fff5da,#ecd39c);color:#263d3e;text-align:center;font:20px/1.4 Georgia,serif;box-shadow:0 5px 14px #061a2020}
+  #home .home-guestbook a{color:#6f301f;font-weight:bold;text-underline-offset:3px}
+  .weekly-pick[data-engleside-pick]{grid-template-columns:minmax(0,1.2fr) minmax(180px,.8fr);margin:9px 0 13px}.weekly-pick[data-engleside-pick] .weekly-pick-copy{padding:14px 18px}.weekly-pick[data-engleside-pick] h2{margin:3px 0 5px;font-size:25px}.weekly-pick[data-engleside-pick] p{font-size:15px;line-height:1.35}.weekly-pick[data-engleside-pick] a{margin-top:9px;padding:8px 11px;font-size:14px}.weekly-pick[data-engleside-pick] figure,.weekly-pick[data-engleside-pick] img{min-height:145px}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const home = document.getElementById('home');
+    const guestbook = home?.querySelector('.home-guestbook');
+    const weather = document.getElementById('todayStrip');
+    if (home && guestbook) home.insertBefore(guestbook, weather?.nextSibling || home.firstChild);
+
+    const dining = document.querySelector('#dining .cards');
+    if (dining && ![...dining.querySelectorAll('h2')].some(heading => heading.textContent === 'The Gables')) {
+      dining.insertAdjacentHTML('beforeend', '<article class="card"><h2>The Gables</h2><p>A gracious historic inn with refined dining in Beach Haven.</p><p><a class="guide-link" href="https://gableslbi.com/dining/" target="_blank" rel="noopener">Dining details</a></p></article>');
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const baseConfirmCheckin = window.confirmCheckin;
+    if (!baseConfirmCheckin) return;
+    window.confirmCheckin = () => {
+      if (!state.checkinTime) return baseConfirmCheckin();
+      const summary = Array.from({ length: state.checkinGuests }, (_, index) => `Guest ${index + 1}: ${state.checkinDrinks[index]} · ${state.checkinDiets[index]}`);
+      baseConfirmCheckin();
+      const text = document.getElementById('confirmText');
+      if (text) text.innerHTML = `${state.room} · breakfast at ${state.checkinTime}.<br><br>${summary.join('<br>')}`;
+    };
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const engleside = document.querySelector('[data-engleside-pick] p');
+    if (engleside) engleside.innerHTML = 'Try their <b>absolutely</b> <b>shrimp, lobster &amp; scallops</b> dish';
+
+    const activityLinks = {
+      'Mr. Tee’s': ['https://www.mrteeslbi.com/', 'Visit Mr. Tee’s'],
+      'Show Place Ice Cream Parlour': ['https://surflight.org/informaton', 'Learn more'],
+      'Fantasy Island': ['https://fantasyislandlbi.com/', 'Visit Fantasy Island'],
+      'Thundering Surf': ['https://www.thunderingsurflbi.com/', 'Visit Thundering Surf']
+    };
+    document.querySelectorAll('#activities .card').forEach(card => {
+      const name = card.querySelector('h2')?.textContent;
+      const link = activityLinks[name];
+      if (!link || card.querySelector('a')) return;
+      card.insertAdjacentHTML('beforeend', `<p><a class="guide-link" href="${link[0]}" target="_blank" rel="noopener">${link[1]}</a></p>`);
+    });
+  });
+</script>
+<style>
+  /* Site-wide refresh: dusty rose, soft sage, and high-contrast ink. */
+  :root{--rose:#9a584b;--sea:#5e7b68;--sand:#d0dfa8;--cream:#fffef9;--ink:#213b39;--ocean:#314d49;--gold:#9a584b;--line:#c5d1b8}
+  body{background:linear-gradient(145deg,#9a584b 0%,#6e423c 48%,#314d49 100%)}
+  .panel{background:#fffef9}.tile{background:#d0dfa8;border-color:#b8ca8d;box-shadow:0 7px 18px #2a3b351f}.tile:hover{background:#d9e5b9}.tile i{color:#9a584b}.tile span{color:#35504a}.option{background:#edf3dc;border-color:#c7d59e}.option.selected,.primary{background:#9a584b;border-color:#9a584b}.primary{box-shadow:0 3px 0 #6f3b31}.quiet{border-color:#b8ca8d;background:#fffef9}.notice,.today-strip{background:#d0dfa8;border-color:#b8ca8d}.card{background:#fffef9;border-color:#d2dcc1}.home-quote{background:linear-gradient(125deg,#fffef9,#e8efd6)}.home-survey{background:#d0dfa8;border-color:#b8ca8d;color:#213b39}.home-survey:hover{background:#dbe7ba}.return-stay{background:#fffef9;border-color:#c5d1b8}.return-eyebrow,.weekly-pick-eyebrow{color:#9a584b}.weekly-pick{background:#fffef9;border-color:#c5d1b8}.weekly-pick a{background:#9a584b}.store-home{border-color:#b8ca8d!important;background:linear-gradient(120deg,#d0dfa8 0%,#edf3dc 55%,#d0dfa8 100%)!important;color:#213b39!important}.store-home span{color:#9a584b!important}.store-home em{color:#35504a!important}.home-guestbook{border-color:#b8ca8d!important;background:linear-gradient(120deg,#d0dfa8,#edf3dc)!important;color:#213b39!important}.home-guestbook a{color:#7a4037!important}.price-list{border-color:#b8ca8d;background:#edf3dc;color:#213b39}.price-list span{border-color:#b8ca8d}.vote-card,.market-item,.juice-market{border-color:#c5d1b8;background:#fffef9}.store-dance{border-color:#b8ca8d;background:#d0dfa8;color:#213b39}.checkin-guest{background:#fffef9;border-color:#c5d1b8}.checkin-options button{background:#edf3dc;border-color:#c7d59e}.checkin-options button.selected{background:#9a584b;border-color:#9a584b}
+
+  /* Keep the weekly restaurant pick charming rather than dominant. */
+  #home .weekly-pick[data-engleside-pick]{width:calc(50% - 8px);grid-template-columns:1fr;margin:9px 0 13px}
+  #home .weekly-pick[data-engleside-pick] .weekly-pick-copy{padding:13px 15px}
+  #home .weekly-pick[data-engleside-pick] figure,#home .weekly-pick[data-engleside-pick] img{min-height:92px;height:92px}
+  #home .weekly-pick[data-engleside-pick] img{object-position:center 58%}
+  #home .weekly-pick[data-engleside-pick] h2{font-size:23px}
+  #home .weekly-pick[data-engleside-pick] p{font-size:14px}
+  #home .weekly-pick[data-engleside-pick] a{font-size:13px;padding:7px 10px}
+  @media(max-width:680px){#home .weekly-pick[data-engleside-pick]{width:100%;grid-template-columns:minmax(0,1fr) 120px}#home .weekly-pick[data-engleside-pick] figure,#home .weekly-pick[data-engleside-pick] img{height:100%;min-height:130px}}
+</style>
+<style>
+  .well-showcase figcaption.well-label{margin:0 0 10px;padding:0;background:transparent;backdrop-filter:none;border-radius:0;color:#9a584b;font:700 13px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+  .well-showcase figcaption.well-label span{display:block;margin:6px 0 0;color:#35504a;font:15px/1.35 Arial,sans-serif;letter-spacing:normal;text-transform:none}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.well-showcase figure').forEach(figure => {
+      const caption = figure.querySelector('figcaption');
+      const image = figure.querySelector('img');
+      if (!caption || !image) return;
+      caption.classList.add('well-label');
+      figure.insertBefore(caption, image);
+    });
+  });
+</script>
+<style>
+  /* Williams Cottage exterior palette: sage siding, cream trim, slate roof, and red door. */
+  :root{--rose:#7b423b;--sea:#647c68;--sand:#b9c99e;--cream:#fffef7;--ink:#263a34;--ocean:#34463f;--gold:#c7bf82;--line:#bdc9ac}
+  body{background:linear-gradient(135deg,#203b3599 0%,#34463fcc 52%,#203b35a8 100%),url('williams-cottage-exterior.png') center/cover fixed}
+  .panel{background:#fffef7f2;backdrop-filter:blur(3px)}
+  .tile{background:#f6f5e8;border-color:#b9c99e;box-shadow:0 8px 20px #172a2438}.tile:hover{background:#eef0d9}.tile i{color:#7b423b}.tile span{color:#4a5d50}
+  .option{background:#edf1dd;border-color:#c1d0a7}.option.selected,.primary{background:#7b423b;border-color:#7b423b}.primary{box-shadow:0 3px 0 #562d29}.quiet{background:#fffef7;border-color:#b9c99e}.notice,.today-strip{background:#e4ecd0;border-color:#b9c99e}.card{background:#fffef9;border-color:#cbd6ba}.home-quote{background:linear-gradient(125deg,#fffef9,#eaf0d9)}.home-survey{background:#e4ecd0;border-color:#b9c99e;color:#263a34}.home-survey:hover{background:#d8e4bc}.return-stay,.weekly-pick{background:#fffef9;border-color:#bdc9ac}.return-eyebrow,.weekly-pick-eyebrow{color:#7b423b}.weekly-pick a{background:#7b423b}.store-home{border-color:#b9c99e!important;background:linear-gradient(120deg,#e5ecd0,#f7f4e2 55%,#d9e4bf)!important;color:#263a34!important}.store-home span{color:#7b423b!important}.store-home em{color:#4a5d50!important}.home-guestbook{border-color:#b9c99e!important;background:linear-gradient(120deg,#e4ecd0,#f7f4e2)!important;color:#263a34!important}.home-guestbook a{color:#6b352e!important}.price-list{border-color:#b9c99e;background:#edf1dd;color:#263a34}.price-list span{border-color:#b9c99e}.vote-card,.market-item,.juice-market{border-color:#bdc9ac;background:#fffef9}.store-dance{border-color:#b9c99e;background:#e4ecd0;color:#263a34}.checkin-guest{background:#fffef9;border-color:#bdc9ac}.checkin-options button{background:#edf1dd;border-color:#c1d0a7}.checkin-options button.selected{background:#7b423b;border-color:#7b423b}
+</style>
+<style>
+  /* Let the dance invitation use the same cream-and-sage treatment as the rest of the cottage. */
+  #store .store-dance{background:#f6f5e8;border-color:#b9c99e;color:#263a34}
+  #store .store-dance span{color:#4a5d50}
+
+  /* A compact but complete Engleside dining guide. */
+  #home .weekly-pick[data-engleside-pick]{grid-template-columns:minmax(0,1.35fr) minmax(170px,.85fr);align-items:stretch}
+  #home .weekly-pick[data-engleside-pick] .weekly-pick-copy{padding:16px 18px}
+  #home .weekly-pick[data-engleside-pick] figure{min-height:205px;height:auto;background:#f6f5e8}
+  #home .weekly-pick[data-engleside-pick] img{width:100%;height:100%;min-height:205px;object-fit:contain;object-position:center}
+  #home .weekly-pick[data-engleside-pick] h2{font-size:24px}
+  #home .weekly-pick[data-engleside-pick] .engleside-options{display:grid;gap:7px;margin-top:9px}
+  #home .weekly-pick[data-engleside-pick] .engleside-options p{margin:0;font:13px/1.3 Arial,sans-serif;color:#4a5d50}
+  #home .weekly-pick[data-engleside-pick] .engleside-options b{color:#263a34}
+  @media(max-width:680px){#home .weekly-pick[data-engleside-pick]{grid-template-columns:minmax(0,1fr) 142px}#home .weekly-pick[data-engleside-pick] figure,#home .weekly-pick[data-engleside-pick] img{min-height:210px}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const pick = document.querySelector('[data-engleside-pick]');
+    if (!pick) return;
+    pick.innerHTML = '<div class="weekly-pick-copy"><span class="weekly-pick-eyebrow">Top pick of the week</span><h2>Engleside Inn</h2><p>Try their <b>absolutely shrimp, lobster &amp; scallops</b> dish.</p><div class="engleside-options"><p><b>The Leeward Room</b> · American dinner, steaks, seafood, and an award-winning wine list. Open daily at 5 PM; reservations suggested.</p><p><b>Engleside Sushi Bar</b> · Fresh traditional and inventive sushi, open daily at 5 PM.</p><p><b>The Sand Bar</b> · Seasonal poolside dining, cocktails, light fare, and live music from 11:30 AM.</p></div><a href="https://www.engleside.com/dining/" target="_blank" rel="noopener">Explore Engleside dining →</a></div><figure><img src="engleside-top-pick.png" alt="Shrimp, lobster, and scallops dish at Engleside Inn"></figure>';
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const guestbook = document.querySelector('#home .home-guestbook');
+    if (guestbook?.firstChild) guestbook.firstChild.nodeValue = 'Don’t forget to sign our guestbook. Loved your stay? ';
+  });
+</script>
+<style>
+  #home .home-promo-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0 14px}
+  #home .home-promo-row .home-guestbook,#home .home-promo-row .store-home{width:auto;margin:0;min-height:100%;display:flex;align-items:center;justify-content:center}
+  #home .weekly-pick[data-engleside-pick]{width:100%}
+  @media(max-width:680px){#home .home-promo-row{grid-template-columns:1fr}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const home = document.getElementById('home');
+    const guestbook = home?.querySelector('.home-guestbook');
+    const stayWell = home?.querySelector('.store-home');
+    if (!home || !guestbook || !stayWell || home.querySelector('.home-promo-row')) return;
+    const row = document.createElement('div');
+    row.className = 'home-promo-row';
+    const engleside = home.querySelector('[data-engleside-pick]');
+    home.insertBefore(row, engleside || home.querySelector('.home-grid'));
+    row.append(guestbook, stayWell);
+  });
+</script>
+<style>
+  #home .home-promo-row .home-guestbook{position:relative;display:block;padding:16px 18px 16px 116px;text-align:left}
+  #home .home-promo-row .home-guestbook::before{content:'';position:absolute;left:13px;top:13px;width:88px;height:88px;border-radius:10px;background:url('guestbook-gratitude.png') center/cover no-repeat}
+  #home .home-promo-row .home-guestbook a{display:block;margin-top:8px;font-size:18px}
+  #home .home-promo-row .store-home{display:block!important;text-align:left;padding:16px 20px}
+  #home .home-promo-row .store-home span,#home .home-promo-row .store-home b,#home .home-promo-row .store-home em{display:block}
+  #home .home-promo-row .store-home b{margin:5px 0}
+  #home .weekly-pick[data-engleside-pick] .engleside-options{gap:10px}
+  #home .weekly-pick[data-engleside-pick] .engleside-options p{font-size:16px;line-height:1.4}
+  @media(max-width:680px){#home .home-promo-row .home-guestbook{min-height:115px}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.querySelector('#home .home-grid');
+    const checkIn = grid?.querySelector('[onclick="beginCheckin()"]');
+    const beachDay = grid?.querySelector('[onclick="show(\'beach\')"]');
+    if (grid && checkIn && beachDay) grid.insertBefore(checkIn, beachDay);
+  });
+</script>
+<style>
+  .guestbook-feedback{margin:10px 0 0;padding:7px 10px;border:1px solid #b9c99e;border-radius:8px;background:#fffef7;color:#6b352e;font:bold 14px Arial,sans-serif}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const guestbook = document.querySelector('#home .home-guestbook');
+    if (guestbook) guestbook.innerHTML = 'Please sign our guestbook &amp; leave a <a href="https://www.tripadvisor.com/Hotel_Review-g46292-d673202-Reviews-Williams_Cottage_Inn-Beach_Haven_Long_Beach_Island_New_Jersey.html" target="_blank" rel="noopener">TripAdvisor review</a><button type="button" class="guestbook-feedback" onclick="beginSurvey()">Share feedback</button>';
+    document.querySelector('#home .home-survey')?.remove();
+
+    const stayCards = document.querySelector('#stay .cards');
+    if (stayCards && ![...stayCards.querySelectorAll('h2')].some(heading => heading.textContent === 'Check in')) {
+      stayCards.insertAdjacentHTML('afterbegin', '<article class="card"><h2>Check in</h2><p>Check in begins at <b>3:00 PM</b>.</p></article>');
+    }
+
+    const beachCards = document.querySelector('#beach .cards');
+    if (beachCards) {
+      [...beachCards.querySelectorAll('.card')].forEach(card => {
+        const title = card.querySelector('h2')?.textContent;
+        if (title === 'Beach badges' || title === 'Boogie boards & umbrellas') card.remove();
+      });
+      const towels = [...beachCards.querySelectorAll('.card')].find(card => card.querySelector('h2')?.textContent === 'Beach towels');
+      const towelText = towels?.querySelector('p');
+      if (towelText && !towelText.textContent.includes('Hang beach towels outside')) towelText.textContent += ' Hang beach towels outside and shake them out.';
+      const sandyItems = [...beachCards.querySelectorAll('.card')].find(card => card.querySelector('h2')?.textContent === 'Please care for shared items');
+      if (sandyItems) { sandyItems.querySelector('h2').textContent = 'Sandy items'; sandyItems.querySelector('p').textContent = 'Please wipe down beach chairs with a towel, shake the towel out, and hang it outside to dry.'; }
+    }
+  });
+</script>
+<style>
+  #home .weekly-pick[data-engleside-pick] .weekly-pick-copy>p{font-size:21px;line-height:1.25;color:#263a34}
+  .mast .rebook-footer{display:block;margin:9px 0 0;color:#fffef7;font:700 18px/1.3 Arial,sans-serif;letter-spacing:normal;text-transform:none;text-decoration:none}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const afterBeach = [...document.querySelectorAll('#beach .card')].find(card => card.querySelector('h2')?.textContent === 'After the beach');
+    const afterBeachText = afterBeach?.querySelector('p');
+    if (afterBeachText) afterBeachText.textContent = 'Please rinse your feet at the outdoor shower before coming inside.';
+
+    const mast = document.querySelector('.mast');
+    const rebook = document.querySelector('.rebook-footer');
+    const location = mast?.querySelector('span');
+    if (mast && rebook && location) location.insertAdjacentElement('afterend', rebook);
+  });
+</script>
+<style>
+  .mast .rebook-footer{font-weight:400}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const guestbook = document.querySelector('#home .home-guestbook');
+    if (guestbook?.firstChild) guestbook.firstChild.nodeValue = 'Please sign our guestbook';
+    const rebook = document.querySelector('.mast .rebook-footer');
+    if (rebook) rebook.textContent = 'We are open all year, accepting reservations for summer 2027';
+  });
+</script>
+<style>
+  #home .home-promo-row .store-home span{font-size:15px;letter-spacing:.1em}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tripAdvisor = document.querySelector('#home .home-guestbook a');
+    if (tripAdvisor) tripAdvisor.textContent = 'TripAdvisor';
+  });
+</script>
+<style>
+  #home .home-promo-row .store-home{position:relative;padding:16px 118px 16px 20px;min-height:116px}
+  #home .home-promo-row .store-home::after{content:'';position:absolute;right:12px;top:12px;width:94px;height:94px;border-radius:10px;background:url('stay-well-provisions.png') center/cover no-repeat}
+</style>
+<style>
+  .innkeeper-bio-link{display:inline-block;margin:18px 0 0;color:#6b352e;font:bold 17px Arial,sans-serif;text-underline-offset:4px}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const support = document.querySelector('#support .panel');
+    if (support && !support.querySelector('.innkeeper-bio-link')) support.insertAdjacentHTML('beforeend', '<a class="innkeeper-bio-link" href="https://justinereilly.my.canva.site/" target="_blank" rel="noopener">Innkeeper bio</a>');
+  });
+</script>
+<style>
+  #home .home-promo-row .home-guestbook{padding-left:140px;min-height:138px}
+  #home .home-promo-row .home-guestbook::before{width:112px;height:112px}
+  #home .home-promo-row .store-home{padding-right:140px;min-height:138px}
+  #home .home-promo-row .store-home::after{width:112px;height:112px}
+</style>
+<style>
+  #home .home-promo-row .home-guestbook::before,#home .home-promo-row .store-home::after{background-size:contain;background-color:#fffef7}
+</style>
 </body>
 </html>
