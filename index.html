@@ -739,5 +739,61 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
     document.querySelector('#home [data-howards-favorite]')?.remove();
   });
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const idea = document.getElementById('storeVote');
+    if (idea) idea.placeholder = 'Ideas: sunscreen, snacks, lip balm, phone pouch…';
+  });
+</script>
+<style>
+  #survey .anonymous-note{margin:0 0 18px;color:#365448;font:18px/1.45 Arial,sans-serif}
+  #survey .survey-optional{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 19px}
+  #survey .survey-optional .field{margin:0 0 5px}
+  @media(max-width:680px){#survey .survey-optional{grid-template-columns:1fr}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const survey = document.getElementById('survey');
+    const heading = survey?.querySelector('.heading');
+    const roomText = document.getElementById('surveyRoom');
+    const feedbackButton = document.querySelector('.guestbook-feedback');
+    if (feedbackButton) feedbackButton.textContent = 'Private feedback';
+    if (!survey || !heading) return;
+
+    if (!survey.querySelector('.survey-optional')) {
+      heading.insertAdjacentHTML('afterend', `
+        <p class="anonymous-note">This is anonymous feedback for the innkeeper only. Your name and room are optional.</p>
+        <div class="survey-optional">
+          <div><label class="field" for="surveyName">Name (optional)</label><input id="surveyName" class="text-input" maxlength="80" placeholder="Leave blank to stay anonymous"></div>
+          <div><label class="field" for="surveyOptionalRoom">Room (optional)</label><select id="surveyOptionalRoom" class="text-input"><option value="">Select a room</option>${rooms.map(room => `<option>${room}</option>`).join('')}</select></div>
+        </div>`);
+    }
+    if (roomText) roomText.textContent = 'Private feedback';
+
+    window.beginSurvey = () => {
+      task = 'survey';
+      state = {};
+      document.getElementById('surveyNote').value = '';
+      document.getElementById('surveyName').value = '';
+      document.getElementById('surveyOptionalRoom').value = '';
+      document.querySelectorAll('#survey .option').forEach(button => button.classList.remove('selected'));
+      document.getElementById('surveySubmit').disabled = true;
+      show('survey');
+    };
+    window.submitSurvey = () => {
+      const feedback = JSON.parse(localStorage.getItem('wciGuestFeedback') || '[]');
+      feedback.unshift({
+        name: document.getElementById('surveyName').value.trim(),
+        room: document.getElementById('surveyOptionalRoom').value,
+        breakfast: state.breakfast,
+        cleanliness: state.cleanliness,
+        note: document.getElementById('surveyNote').value.trim(),
+        created: new Date().toISOString()
+      });
+      localStorage.setItem('wciGuestFeedback', JSON.stringify(feedback));
+      showConfirmation('Thank you for your private feedback.', 'Your feedback has been saved for the innkeeper.');
+    };
+  });
+</script>
 </body>
 </html>
