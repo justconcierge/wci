@@ -1,10 +1,6 @@
 {
-  "updated": "2026-08-10",
+  "updated": "2026-08-11",
   "events": {
-    "2026-08-10": [
-      "Aug 10 Taylor Mason - Family Comedy Night · 6:00 PM",
-      "Aug 10 Mike Marino - Comedy Night · 8:30 PM"
-    ],
     "2026-08-11": [
       "Aug 11 Pretty Woman: The Musical · 2:00 PM",
       "Aug 11 Pretty Woman: The Musical · 8:00 PM"
@@ -263,6 +259,10 @@
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
     ],
+    "2026-08-10": [
+      "Aug 10 Mike Marino - Comedy Night · 8:30 PM",
+      "Aug 10 Taylor Mason - Family Comedy Night · 6:00 PM"
+    ],
     "2026-08-09": [
       "Aug 9 Cinderella · 6:00 PM",
       "Aug 9 Pretty Woman: The Musical · 2:00 PM"
@@ -317,17 +317,13 @@
       "Jul 28 Pretty Woman: The Musical · 8:00 PM"
     ],
     "2026-07-26": [
-      "Jul 26 Aladdin, Jr. · 6:00 PM",
-      "Jul 26 Young Frankenstein · 2:00 PM"
-    ],
-    "2026-07-25": [
-      "Jul 25 Young Frankenstein · 8:00 PM"
+      "Jul 26 Aladdin, Jr. · 6:00 PM"
     ]
   },
   "availability": {
-    "summary": "Next available stay · Tuesday, Aug. 11 · Dome Room · Asian Room",
+    "summary": "Next available stay · Wednesday, Aug. 12 · Dome Room · Asian Room · Angel Room",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Aug. 11.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-11&end_date=2026-08-12&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Aug. 12.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-12&end_date=2026-08-13&number_of_adults=2&number_of_children=0"
   }
 }
