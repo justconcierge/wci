@@ -1,13 +1,9 @@
 {
-  "updated": "2026-08-13",
+  "updated": "2026-08-14",
   "events": {
-    "2026-08-12": [
-      "Aug 12 Aladdin, Jr. · 6:00 PM",
-      "Aug 12 Pretty Woman: The Musical · 8:00 PM"
-    ],
     "2026-08-13": [
-      "Aug 13 Aladdin, Jr. · 6:00 PM",
-      "Aug 13 Pretty Woman: The Musical · 8:00 PM"
+      "Aug 13 Pretty Woman: The Musical · 8:00 PM",
+      "Aug 13 Aladdin, Jr. · 6:00 PM"
     ],
     "2026-08-14": [
       "Aug 14 Aladdin, Jr. · 6:00 PM",
@@ -255,6 +251,10 @@
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
     ],
+    "2026-08-12": [
+      "Aug 12 Pretty Woman: The Musical · 8:00 PM",
+      "Aug 12 Aladdin, Jr. · 6:00 PM"
+    ],
     "2026-08-11": [
       "Aug 11 Pretty Woman: The Musical · 8:00 PM",
       "Aug 11 Pretty Woman: The Musical · 2:00 PM"
@@ -306,18 +306,13 @@
     ],
     "2026-07-30": [
       "Jul 30 Pretty Woman: The Musical · 8:00 PM",
-      "Jul 30 Little Mermaid · 6:00 PM",
-      "Jul 30 Pretty Woman: The Musical · 2:00 PM"
-    ],
-    "2026-07-29": [
-      "Jul 29 Pretty Woman: The Musical · 8:00 PM",
-      "Jul 29 Little Mermaid · 6:00 PM"
+      "Jul 30 Little Mermaid · 6:00 PM"
     ]
   },
   "availability": {
-    "summary": "Next available stay · Friday, Aug. 14 · Dome Room · Aviary Room · Asian Room · Rose Suite",
+    "summary": "Next available stay · Monday, Aug. 17 · Dome Room",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Aug. 14.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-14&end_date=2026-08-15&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Aug. 17.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-17&end_date=2026-08-18&number_of_adults=2&number_of_children=0"
   }
 }
