@@ -1,10 +1,6 @@
 {
-  "updated": "2026-08-14",
+  "updated": "2026-08-15",
   "events": {
-    "2026-08-13": [
-      "Aug 13 Pretty Woman: The Musical · 8:00 PM",
-      "Aug 13 Aladdin, Jr. · 6:00 PM"
-    ],
     "2026-08-14": [
       "Aug 14 Aladdin, Jr. · 6:00 PM",
       "Aug 14 Pretty Woman: The Musical · 8:00 PM"
@@ -189,6 +185,9 @@
     "2026-11-07": [
       "Nov 7 Comedy Night - Fundraiser for BHVFC · 7:30 PM"
     ],
+    "2026-11-14": [
+      "Nov 14 La Traviata - Center Stage Opera · 7:30 PM"
+    ],
     "2026-11-22": [
       "Nov 22 Holidays with The Duprees · 2:00 PM"
     ],
@@ -251,6 +250,10 @@
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
     ],
+    "2026-08-13": [
+      "Aug 13 Pretty Woman: The Musical · 8:00 PM",
+      "Aug 13 Aladdin, Jr. · 6:00 PM"
+    ],
     "2026-08-12": [
       "Aug 12 Pretty Woman: The Musical · 8:00 PM",
       "Aug 12 Aladdin, Jr. · 6:00 PM"
@@ -305,8 +308,7 @@
       "Jul 31 Little Mermaid · 6:00 PM"
     ],
     "2026-07-30": [
-      "Jul 30 Pretty Woman: The Musical · 8:00 PM",
-      "Jul 30 Little Mermaid · 6:00 PM"
+      "Jul 30 Pretty Woman: The Musical · 8:00 PM"
     ]
   },
   "availability": {
