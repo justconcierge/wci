@@ -1,18 +1,6 @@
 {
-  "updated": "2026-08-17",
+  "updated": "2026-08-18",
   "events": {
-    "2026-08-14": [
-      "Aug 14 Aladdin, Jr. · 6:00 PM",
-      "Aug 14 Pretty Woman: The Musical · 8:00 PM"
-    ],
-    "2026-08-15": [
-      "Aug 15 Aladdin, Jr. · 6:00 PM",
-      "Aug 15 Pretty Woman: The Musical · 8:00 PM"
-    ],
-    "2026-08-16": [
-      "Aug 16 Pretty Woman: The Musical · 2:00 PM",
-      "Aug 16 Aladdin, Jr. · 6:00 PM"
-    ],
     "2026-08-18": [
       "Aug 18 1776 · 8:00 PM"
     ],
@@ -250,6 +238,18 @@
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
     ],
+    "2026-08-16": [
+      "Aug 16 Aladdin, Jr. · 6:00 PM",
+      "Aug 16 Pretty Woman: The Musical · 2:00 PM"
+    ],
+    "2026-08-15": [
+      "Aug 15 Pretty Woman: The Musical · 8:00 PM",
+      "Aug 15 Aladdin, Jr. · 6:00 PM"
+    ],
+    "2026-08-14": [
+      "Aug 14 Pretty Woman: The Musical · 8:00 PM",
+      "Aug 14 Aladdin, Jr. · 6:00 PM"
+    ],
     "2026-08-13": [
       "Aug 13 Pretty Woman: The Musical · 8:00 PM",
       "Aug 13 Aladdin, Jr. · 6:00 PM"
@@ -296,25 +296,13 @@
       "Aug 3 Back to the Garden 1969 - The Woodstock Experience · 5:00 PM"
     ],
     "2026-08-02": [
-      "Aug 2 Little Mermaid · 6:00 PM",
-      "Aug 2 Pretty Woman: The Musical · 2:00 PM"
-    ],
-    "2026-08-01": [
-      "Aug 1 Pretty Woman: The Musical · 8:00 PM",
-      "Aug 1 Little Mermaid · 6:00 PM"
-    ],
-    "2026-07-31": [
-      "Jul 31 Pretty Woman: The Musical · 8:00 PM",
-      "Jul 31 Little Mermaid · 6:00 PM"
-    ],
-    "2026-07-30": [
-      "Jul 30 Pretty Woman: The Musical · 8:00 PM"
+      "Aug 2 Little Mermaid · 6:00 PM"
     ]
   },
   "availability": {
-    "summary": "Next available stay · Tuesday, Aug. 18 · Garden Room · Aviary Room · Asian Room",
+    "summary": "Next available stay · Tuesday, Aug. 25 · Garden Room · Aviary Room · Asian Room · Rose Suite",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Aug. 18.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-18&end_date=2026-08-19&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Aug. 25.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-25&end_date=2026-08-26&number_of_adults=2&number_of_children=0"
   }
 }
