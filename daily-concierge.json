@@ -1,22 +1,6 @@
 {
-  "updated": "2026-08-21",
+  "updated": "2026-08-22",
   "events": {
-    "2026-08-18": [
-      "Aug 18 1776 · 8:00 PM"
-    ],
-    "2026-08-19": [
-      "Aug 19 Wizard of Oz · 6:00 PM",
-      "Aug 19 1776 · 8:00 PM"
-    ],
-    "2026-08-20": [
-      "Aug 20 1776 · 2:00 PM",
-      "Aug 20 Wizard of Oz · 6:00 PM",
-      "Aug 20 1776 · 8:00 PM"
-    ],
-    "2026-08-21": [
-      "Aug 21 Wizard of Oz · 6:00 PM",
-      "Aug 21 1776 · 8:00 PM"
-    ],
     "2026-08-22": [
       "Aug 22 Wizard of Oz · 6:00 PM",
       "Aug 22 1776 · 8:00 PM"
@@ -238,6 +222,22 @@
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
     ],
+    "2026-08-21": [
+      "Aug 21 1776 · 8:00 PM",
+      "Aug 21 Wizard of Oz · 6:00 PM"
+    ],
+    "2026-08-20": [
+      "Aug 20 1776 · 8:00 PM",
+      "Aug 20 Wizard of Oz · 6:00 PM",
+      "Aug 20 1776 · 2:00 PM"
+    ],
+    "2026-08-19": [
+      "Aug 19 1776 · 8:00 PM",
+      "Aug 19 Wizard of Oz · 6:00 PM"
+    ],
+    "2026-08-18": [
+      "Aug 18 1776 · 8:00 PM"
+    ],
     "2026-08-16": [
       "Aug 16 Aladdin, Jr. · 6:00 PM",
       "Aug 16 Pretty Woman: The Musical · 2:00 PM"
@@ -280,29 +280,13 @@
     ],
     "2026-08-06": [
       "Aug 6 Pretty Woman: The Musical · 8:00 PM",
-      "Aug 6 Cinderella · 6:00 PM",
-      "Aug 6 Pretty Woman: The Musical · 2:00 PM"
-    ],
-    "2026-08-05": [
-      "Aug 5 Pretty Woman: The Musical · 8:00 PM",
-      "Aug 5 Cinderella · 6:00 PM"
-    ],
-    "2026-08-04": [
-      "Aug 4 Pretty Woman: The Musical · 8:00 PM",
-      "Aug 4 Pretty Woman: The Musical · 2:00 PM"
-    ],
-    "2026-08-03": [
-      "Aug 3 Back to the Garden 1969 - The Woodstock Experience · 8:00 PM",
-      "Aug 3 Back to the Garden 1969 - The Woodstock Experience · 5:00 PM"
-    ],
-    "2026-08-02": [
-      "Aug 2 Little Mermaid · 6:00 PM"
+      "Aug 6 Cinderella · 6:00 PM"
     ]
   },
   "availability": {
-    "summary": "Next available stay · Friday, Aug. 28 · Asian Room",
+    "summary": "Next available stay · Saturday, Aug. 29 · Asian Room",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Aug. 28.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-28&end_date=2026-08-29&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Aug. 29.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-29&end_date=2026-08-30&number_of_adults=2&number_of_children=0"
   }
 }
