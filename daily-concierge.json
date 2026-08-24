@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23",
+  "updated": "2026-08-24",
   "events": {
     "2026-08-22": [
       "Aug 22 Wizard of Oz · 6:00 PM",
@@ -284,9 +284,9 @@
     ]
   },
   "availability": {
-    "summary": "Next available stay · Sunday, Aug. 30 · Asian Room",
+    "summary": "Next available stay · Monday, Aug. 31 · Dome Room · Opulent Room · Asian Room · Angel Room",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Aug. 30.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-30&end_date=2026-08-31&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Aug. 31.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-31&end_date=2026-09-01&number_of_adults=2&number_of_children=0"
   }
 }
