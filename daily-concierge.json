@@ -1,10 +1,6 @@
 {
-  "updated": "2026-08-28",
+  "updated": "2026-08-29",
   "events": {
-    "2026-08-28": [
-      "Aug 28 Snow White · 6:00 PM",
-      "Aug 28 Comedy night · 8:30 PM"
-    ],
     "2026-08-29": [
       "Aug 29 Snow White · 6:00 PM",
       "Aug 29 1776 · 8:00 PM"
@@ -196,6 +192,10 @@
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
     ],
+    "2026-08-28": [
+      "Aug 28 Comedy night · 8:30 PM",
+      "Aug 28 Snow White · 6:00 PM"
+    ],
     "2026-08-27": [
       "Aug 27 1776 · 8:00 PM",
       "Aug 27 Snow White · 6:00 PM",
@@ -249,10 +249,6 @@
     "2026-08-14": [
       "Aug 14 Pretty Woman: The Musical · 8:00 PM",
       "Aug 14 Aladdin, Jr. · 6:00 PM"
-    ],
-    "2026-08-13": [
-      "Aug 13 Pretty Woman: The Musical · 8:00 PM",
-      "Aug 13 Aladdin, Jr. · 6:00 PM"
     ]
   },
   "availability": {
