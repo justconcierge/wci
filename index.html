@@ -795,5 +795,97 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
     };
   });
 </script>
+<style>
+  #store .relax-feature-art{margin:0 0 22px;border:1px solid #bdc9ac;border-radius:16px;overflow:hidden;background:#fffef7;box-shadow:0 7px 18px rgba(34,47,40,.13)}
+  #store .relax-feature-art img{display:block;width:100%;max-height:310px;object-fit:cover;object-position:center 58%}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const heading = document.querySelector('#store .store-heading');
+    const content = document.getElementById('storeContent');
+    if (heading && content && !document.querySelector('#store .relax-feature-art')) {
+      const feature = document.createElement('figure');
+      feature.className = 'relax-feature-art';
+      feature.innerHTML = '<img src="relax-and-recover-feature.png" alt="Relax and recover collection with water bottles, a wellness smoothie, eye mask, and organza pouch">';
+      content.before(feature);
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const waterBottleImage = document.querySelector('.well-showcase figure:nth-child(2) img');
+    if (waterBottleImage) {
+      waterBottleImage.src = 'thermoflask-relax-and-recover.png';
+      waterBottleImage.alt = 'Black and rose ThermoFlask water bottles with a sleep set and cottage comforts';
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('h2').forEach(heading => {
+      if (heading.textContent.trim() === 'Engleside Inn') heading.textContent = 'Engleside';
+    });
+    document.querySelectorAll('img[alt*="Engleside Inn"]').forEach(image => {
+      image.alt = image.alt.replace('Engleside Inn', 'Engleside');
+    });
+  });
+</script>
+<style>
+  #home .candlelight-event{margin:0 0 12px;padding:0;border:2px solid #7b423b;border-radius:16px;background:linear-gradient(125deg,#fff9ed,#efe3c8);color:#263a34;box-shadow:0 7px 18px rgba(34,47,40,.16);overflow:hidden}
+  #home .candlelight-event-inner{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(240px,.7fr);align-items:stretch}
+  #home .candlelight-event-copy{padding:19px 22px}
+  #home .candlelight-event figure{margin:0;min-height:200px;background:#21130d}
+  #home .candlelight-event figure img{display:block;width:100%;height:100%;min-height:200px;object-fit:cover;object-position:center}
+  #home .candlelight-event span{display:block;color:#7b423b;font:800 15px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+  #home .candlelight-event h2{margin:6px 0;font:normal 29px/1.12 Georgia,serif}
+  #home .candlelight-event p{margin:0;color:#365448;font:17px/1.4 Arial,sans-serif}
+  #home .candlelight-event a{display:inline-block;margin-top:12px;color:#fff!important;background:#7b423b;border-radius:999px;padding:10px 15px;font:700 15px/1 Arial,sans-serif;text-decoration:none}
+  @media (max-width:700px){#home .candlelight-event-inner{grid-template-columns:1fr}#home .candlelight-event figure{min-height:180px}#home .candlelight-event figure img{min-height:180px}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const nextStay = document.querySelector('#home .return-stay');
+    if (!nextStay || document.querySelector('#home .candlelight-event')) return;
+    const event = document.createElement('section');
+    event.className = 'candlelight-event';
+    event.setAttribute('aria-label', 'LBI Historical Museum Candlelight Concert');
+    event.innerHTML = '<div class="candlelight-event-inner"><div class="candlelight-event-copy"><span>Chowderfest weekend · Friday, October 2</span><h2>LBIHA’s Candlelight Concert</h2><p>Four Shore Strings, champagne, cheese boards, and candlelit music at the LBI Historical Museum. Doors open at 5:30 PM. Tickets just $45. All rooms except the Dome are still available for Chowderfest weekend.</p><a href="https://www.lbihistoricalmuseum.org/event-details/lbihas-candlelight-concert" target="_blank" rel="noopener">Event details &amp; tickets</a> <a href="https://www.bhchowdercookoff.com/" target="_blank" rel="noopener">Chowderfest details</a></div><figure><img src="candlelight-concert.png" alt="Cello surrounded by candlelight at the LBI Historical Museum Candlelight Concert"></figure></div>';
+    nextStay.before(event);
+  });
+</script>
 </body>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const concertPhoto = document.querySelector('#home .candlelight-event figure img');
+    if (concertPhoto) concertPhoto.src = 'candlelight-concert.jpg';
+  });
+</script>
+<style>
+  /* New welcome screen: the established dashboard remains the Guest portal. */
+  #welcome{max-width:1180px;margin:0 auto;padding:0 0 16px}
+  #welcome .welcome-card{overflow:hidden;border:1px solid rgba(255,255,255,.55);border-radius:22px;background:#fffdf7;box-shadow:0 18px 46px rgba(6,26,32,.32)}
+  #welcome .welcome-card img{display:block;width:100%;height:auto;background:#fffdf7}
+  #welcome .welcome-actions{display:flex;align-items:center;justify-content:center;gap:14px;padding:18px 22px;background:linear-gradient(120deg,#f7f2e7,#e1ead0)}
+  #welcome .guest-portal-button{border:0;border-radius:999px;padding:15px 29px;background:#173b2c;color:#fffdf7;font:700 19px/1 Arial,sans-serif;letter-spacing:.02em;box-shadow:0 3px 0 #0d261c}
+  #welcome .guest-portal-button:hover{background:#295541}
+  #welcome .welcome-note{margin:0;color:#344b40;font:16px/1.4 Arial,sans-serif}
+  @media(max-width:680px){#welcome{padding:0 8px 12px}#welcome .welcome-card{border-radius:16px}#welcome .welcome-actions{padding:14px;flex-direction:column}#welcome .guest-portal-button{width:100%;font-size:18px}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const home = document.getElementById('home');
+    if (!home || document.getElementById('welcome')) return;
+    const welcome = document.createElement('section');
+    welcome.id = 'welcome';
+    welcome.className = 'screen active';
+    welcome.setAttribute('aria-label', 'Williams Cottage Inn welcome');
+    welcome.innerHTML = '<div class="welcome-card"><img src="beach-bites-healthy.jpg" alt="Williams Cottage Inn Beach Bites healthy menu"><div class="welcome-actions"><button class="guest-portal-button" type="button">Guest portal</button><p class="welcome-note">Already staying with us? Find your inn guide, check in, and more.</p></div></div>';
+    home.before(welcome);
+    home.classList.remove('active');
+    welcome.querySelector('.guest-portal-button').addEventListener('click', () => show('home'));
+    const menu = home.querySelector('.home-grid');
+    const concert = home.querySelector('.candlelight-event');
+    if (menu && concert) menu.insertAdjacentElement('afterend', concert);
+  });
+</script>
 </html>
