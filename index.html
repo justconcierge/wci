@@ -51,7 +51,7 @@
   <script>document.addEventListener('DOMContentLoaded',()=>{const footer=document.querySelector('.kiosk-footer');if(footer&&!footer.querySelector('.footer-address'))footer.innerHTML='<div class="footer-address"><b>506 South Atlantic Avenue</b><span>Beach Haven · Long Beach Island</span><span id="footerPhone" class="footer-phone"></span><button class="support-button" onclick="show(\'support\')">Contact innkeeper</button></div><a class="rebook-footer" href="https://www.williamscottageinn.com/" target="_blank" rel="noopener">We are open all year + accepting reservations for summer 2027</a><button class="staff-access" onclick="show(\'staff-login\')">Innkeeper access</button>';refreshGuestSettings()})</script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const breakfastFooter=document.querySelector('#breakfast-time .footer-row');if(breakfastFooter)breakfastFooter.innerHTML='<button class="primary" id="timeNext" disabled onclick="confirmBreakfastAtTime()">Confirm breakfast</button><button class="quiet" onclick="confirmBreakfastAtTime(\'Vegan\')">Request vegan</button><button class="quiet" onclick="confirmBreakfastAtTime(\'Gluten-free\')">Request gluten-free</button>';window.confirmBreakfastAtTime=(diet='No dietary restrictions')=>{if(!state.time){alert('Please select a breakfast time first.');return}state.diet=diet;newItem('Breakfast',`${state.time} · ${state.diet}`,'');showConfirmation('Breakfast confirmed.',`${state.room}: ${state.time}, ${state.diet.toLowerCase()}.`)}})</script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const baseShow=window.show;window.show=(id=>{baseShow(id);if(id==='breakfast-diet'){state.diet='No dietary restrictions';const options=document.querySelectorAll('#breakfast-diet .option');options.forEach(option=>option.classList.remove('selected'));if(options[0])options[0].classList.add('selected')}})})</script>
-  <script>document.addEventListener('DOMContentLoaded',()=>{const home=document.getElementById('home'),moveBanner=()=>{const banner=document.getElementById('todayStrip');if(home&&banner&&home.firstElementChild!==banner)home.insertBefore(banner,home.firstElementChild)};if(home)new MutationObserver(moveBanner).observe(home,{childList:true});moveBanner();const tides=document.getElementById('tideToday');if(tides){const simplify=()=>tides.querySelectorAll('strong').forEach(item=>{if(item.textContent.includes(' Tide'))item.textContent=item.textContent.replace(' Tide','')});new MutationObserver(simplify).observe(tides,{childList:true,subtree:true,characterData:true});simplify()}const departure=document.querySelector('#stay .card p');if(departure&&departure.firstChild)departure.firstChild.textContent='Check-out by ';const breakfastConfirm=document.getElementById('dietNext');if(breakfastConfirm)breakfastConfirm.disabled=false;window.sendBreakfast=()=>{if(!state.diet)state.diet='No dietary restrictions';const note=document.getElementById('dietNote').value.trim();newItem('Breakfast',`${state.time} · ${state.diet}`,note);showConfirmation('Breakfast confirmed.',`${state.room}: ${state.time}, ${state.diet.toLowerCase()}.${note?' Your additional note was included.':''}`)}})</script>
+  <script>document.addEventListener('DOMContentLoaded',()=>{const home=document.getElementById('home'),moveBanner=()=>{const banner=document.getElementById('todayStrip'),week=document.getElementById('weekAhead'),first=week||banner;if(home&&first&&home.firstElementChild!==first)home.insertBefore(first,home.firstElementChild)};if(home)new MutationObserver(moveBanner).observe(home,{childList:true});moveBanner();const tides=document.getElementById('tideToday');if(tides){const simplify=()=>tides.querySelectorAll('strong').forEach(item=>{if(item.textContent.includes(' Tide'))item.textContent=item.textContent.replace(' Tide','')});new MutationObserver(simplify).observe(tides,{childList:true,subtree:true,characterData:true});simplify()}const departure=document.querySelector('#stay .card p');if(departure&&departure.firstChild)departure.firstChild.textContent='Check-out by ';const breakfastConfirm=document.getElementById('dietNext');if(breakfastConfirm)breakfastConfirm.disabled=false;window.sendBreakfast=()=>{if(!state.diet)state.diet='No dietary restrictions';const note=document.getElementById('dietNote').value.trim();newItem('Breakfast',`${state.time} · ${state.diet}`,note);showConfirmation('Breakfast confirmed.',`${state.room}: ${state.time}, ${state.diet.toLowerCase()}.${note?' Your additional note was included.':''}`)}})</script>
   <style>
     .weekly-pick{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(230px,.92fr);margin:14px 0 22px;border:1px solid #b9d2ca;border-radius:16px;overflow:hidden;background:#fffdf7;color:#102f38;box-shadow:0 6px 15px #061a2015}
     .weekly-pick-copy{padding:22px 24px;align-self:center}.weekly-pick-eyebrow{display:block;color:#a34536;font:700 13px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}.weekly-pick h2{margin:6px 0 9px;font:normal 30px/1.1 Georgia,serif}.weekly-pick p{margin:0;color:#35545b;font:17px/1.45 Arial,sans-serif}.weekly-pick a{display:inline-block;margin-top:14px;color:#fff;background:#073c4a;border-radius:10px;padding:11px 15px;text-decoration:none;font:700 16px/1.2 Arial,sans-serif}.weekly-pick figure{margin:0;min-height:205px;background:#173f49}.weekly-pick img{display:block;width:100%;height:100%;min-height:205px;object-fit:cover;object-position:center}
@@ -879,13 +879,73 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
     welcome.id = 'welcome';
     welcome.className = 'screen active';
     welcome.setAttribute('aria-label', 'Williams Cottage Inn welcome');
-    welcome.innerHTML = '<div class="welcome-card"><img src="beach-bites-healthy.jpg" alt="Williams Cottage Inn Beach Bites healthy menu"><div class="welcome-actions"><button class="guest-portal-button" type="button">Guest portal</button><p class="welcome-note">Already staying with us? Find your inn guide, check in, and more.</p></div></div>';
+    welcome.innerHTML = '<div class="welcome-card"><img src="beach-bites-wcilbi.jpg" alt="Williams Cottage Inn Beach Bites healthy menu"><div class="welcome-actions"><a class="instagram-home-link" href="https://www.instagram.com/wcilbi/" target="_blank" rel="noopener" aria-label="Follow @wcilbi on Instagram"><span class="instagram-logo" aria-hidden="true"></span> Follow @wcilbi</a><button class="guest-portal-button" type="button">Guest portal</button><p class="welcome-note">Already staying with us? Find your inn guide, check in, and more.</p></div></div>';
     home.before(welcome);
     home.classList.remove('active');
     welcome.querySelector('.guest-portal-button').addEventListener('click', () => show('home'));
     const menu = home.querySelector('.home-grid');
     const concert = home.querySelector('.candlelight-event');
     if (menu && concert) menu.insertAdjacentElement('afterend', concert);
+  });
+</script>
+<style>
+  .instagram-logo{position:relative;display:inline-block;width:24px;height:24px;border:2px solid currentColor;border-radius:7px;vertical-align:middle}
+  .instagram-logo::before{content:'';position:absolute;left:50%;top:50%;width:8px;height:8px;border:2px solid currentColor;border-radius:50%;transform:translate(-50%,-50%)}
+  .instagram-logo::after{content:'';position:absolute;right:3px;top:3px;width:3px;height:3px;border-radius:50%;background:currentColor}
+  #welcome .instagram-home-link{display:inline-flex;align-items:center;gap:8px;color:#7b423b;font:700 15px/1 Arial,sans-serif;text-decoration:none}
+  #welcome .instagram-home-link:hover{text-decoration:underline;text-underline-offset:4px}
+  .footer-instagram-link{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 auto 13px;color:#fffef7;font:700 15px/1 Arial,sans-serif;text-decoration:none}
+  .footer-instagram-link:hover{text-decoration:underline;text-underline-offset:4px}
+  .footer-instagram-qr{display:block;width:92px;height:92px;object-fit:contain;margin:0 auto 14px;border-radius:8px;background:#fff}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const footer = document.querySelector('.footer-address');
+    const contact = footer?.querySelector('.support-button');
+    if (footer && contact && !footer.querySelector('.footer-instagram-link')) {
+      contact.insertAdjacentHTML('beforebegin', '<a class="footer-instagram-link" href="https://www.instagram.com/wcilbi/" target="_blank" rel="noopener"><span class="instagram-logo" aria-hidden="true"></span> Follow @wcilbi</a><a href="https://www.instagram.com/wcilbi/" target="_blank" rel="noopener" aria-label="Open @wcilbi on Instagram"><img class="footer-instagram-qr" src="wcilbi-instagram-qr-small.png" alt="QR code for @wcilbi on Instagram"></a>');
+    }
+  });
+</script>
+<style>
+  .week-ahead{margin:0 0 14px;padding:16px 18px;border:1px solid #b9c99e;border-radius:16px;background:#e4ecd0;color:#263a34;box-shadow:0 5px 14px rgba(23,55,64,.1)}
+  .week-ahead h2{margin:0 0 11px;font:normal 23px/1.1 Georgia,serif}
+  .week-ahead-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+  .week-ahead-day{min-width:0;padding:9px 6px;border:1px solid #c5d1b8;border-radius:10px;background:#fffef9;text-align:center}
+  .week-ahead-day b{display:block;color:#7b423b;font:700 13px/1.15 Arial,sans-serif;text-transform:uppercase}
+  .week-ahead-day span{display:block;margin:5px 0;color:#263a34;font:700 15px/1.2 Arial,sans-serif}
+  .week-ahead-day small{display:block;color:#4a5d50;font:12px/1.25 Arial,sans-serif}
+  @media(max-width:680px){.week-ahead-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.week-ahead{padding:14px}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', async () => {
+    const today = document.getElementById('todayStrip');
+    const home = document.getElementById('home');
+    if (!today || !home || document.getElementById('weekAhead')) return;
+    const week = document.createElement('section');
+    week.id = 'weekAhead';
+    week.className = 'week-ahead';
+    week.innerHTML = '<h2>This week in Beach Haven</h2><div class="week-ahead-grid"></div>';
+    today.before(week);
+    const grid = week.querySelector('.week-ahead-grid');
+    const weekday = date => new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone: 'America/New_York' }).format(new Date(date + 'T12:00:00'));
+    const loadingDays = Array.from({ length: 7 }, (_, index) => {
+      const day = new Date(Date.now() + index * 86400000);
+      return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York' }).format(day);
+    });
+    grid.innerHTML = loadingDays.map(day => `<article class="week-ahead-day"><b>${weekday(day)}</b><span>—</span><small>Loading</small></article>`).join('');
+    try {
+      const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=39.5596&longitude=-74.2435&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&temperature_unit=fahrenheit&timezone=America%2FNew_York&forecast_days=7');
+      const forecast = await response.json();
+      if (!forecast.daily?.time) throw new Error('Forecast unavailable');
+      grid.innerHTML = forecast.daily.time.map((day, index) => {
+        const chance = forecast.daily.precipitation_probability_max[index];
+        const description = weatherLabel(forecast.daily.weather_code[index]);
+        return `<article class="week-ahead-day"><b>${weekday(day)}</b><span>${Math.round(forecast.daily.temperature_2m_max[index])}° / ${Math.round(forecast.daily.temperature_2m_min[index])}°</span><small>${description}${chance ? ` · ${chance}% rain` : ''}</small></article>`;
+      }).join('');
+    } catch (_) {
+      grid.innerHTML = '<p class="small">The week-ahead forecast is temporarily unavailable.</p>';
+    }
   });
 </script>
 </html>
