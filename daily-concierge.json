@@ -1,14 +1,10 @@
 {
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "events": {
-    "2026-09-02": [
-      "Sep 2 Little Mermaid · 6:00 PM",
-      "Sep 2 Ghost The Musical · 8:00 PM"
-    ],
     "2026-09-03": [
-      "Sep 3 Ghost The Musical · 2:00 PM",
+      "Sep 3 Ghost The Musical · 8:00 PM",
       "Sep 3 Little Mermaid · 6:00 PM",
-      "Sep 3 Ghost The Musical · 8:00 PM"
+      "Sep 3 Ghost The Musical · 2:00 PM"
     ],
     "2026-09-04": [
       "Sep 4 Little Mermaid · 6:00 PM",
@@ -181,6 +177,10 @@
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
     ],
+    "2026-09-02": [
+      "Sep 2 Ghost The Musical · 8:00 PM",
+      "Sep 2 Little Mermaid · 6:00 PM"
+    ],
     "2026-09-01": [
       "Sep 1 Ghost The Musical · 8:00 PM"
     ],
@@ -230,22 +230,12 @@
       "Aug 20 1776 · 8:00 PM",
       "Aug 20 Wizard of Oz · 6:00 PM",
       "Aug 20 1776 · 2:00 PM"
-    ],
-    "2026-08-19": [
-      "Aug 19 1776 · 8:00 PM",
-      "Aug 19 Wizard of Oz · 6:00 PM"
-    ],
-    "2026-08-18": [
-      "Aug 18 1776 · 8:00 PM"
-    ],
-    "2026-08-16": [
-      "Aug 16 Aladdin, Jr. · 6:00 PM"
     ]
   },
   "availability": {
-    "summary": "Next available stay · Thursday, Sep 10 · Opulent Room · Asian Room · Angel Room · Blue Room · Rose Suite",
+    "summary": "Next available stay · Friday, Sep 11 · Asian Room · Angel Room",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Sep 10.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-09-10&end_date=2026-09-11&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Sep 11.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-09-11&end_date=2026-09-12&number_of_adults=2&number_of_children=0"
   }
 }
