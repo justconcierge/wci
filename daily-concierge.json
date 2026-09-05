@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
   "events": {
     "2026-09-03": [
       "Sep 3 Ghost The Musical · 8:00 PM",
@@ -233,9 +233,9 @@
     ]
   },
   "availability": {
-    "summary": "Next available stay · Friday, Sep 11 · Asian Room · Angel Room",
+    "summary": "Next available stay · Saturday, Sep 12 · Dome Room",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Sep 11.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-09-11&end_date=2026-09-12&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Sep 12.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-09-12&end_date=2026-09-13&number_of_adults=2&number_of_children=0"
   }
 }
