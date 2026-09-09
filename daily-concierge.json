@@ -1,10 +1,6 @@
 {
-  "updated": "2026-09-08",
+  "updated": "2026-09-09",
   "events": {
-    "2026-09-08": [
-      "Sep 8 Ghost The Musical · 2:00 PM",
-      "Sep 8 Ghost The Musical · 7:30 PM"
-    ],
     "2026-09-09": [
       "Sep 9 Ghost The Musical · 7:30 PM"
     ],
@@ -161,6 +157,10 @@
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
     ],
+    "2026-09-08": [
+      "Sep 8 Ghost The Musical · 7:30 PM",
+      "Sep 8 Ghost The Musical · 2:00 PM"
+    ],
     "2026-09-06": [
       "Sep 6 Little Mermaid · 6:00 PM",
       "Sep 6 Ghost The Musical · 2:00 PM"
@@ -214,15 +214,13 @@
       "Aug 24 Winslow - An Eagles Tribute Band · 5:00 PM"
     ],
     "2026-08-23": [
-      "Aug 23 Comedy Night - Fundraiser for the JCC of LBI · 8:00 PM",
-      "Aug 23 Wizard of Oz · 6:00 PM",
-      "Aug 23 1776 · 2:00 PM"
+      "Aug 23 Comedy Night - Fundraiser for the JCC of LBI · 8:00 PM"
     ]
   },
   "availability": {
-    "summary": "Next available stay · Tuesday, Sep 15 · Dome Room · Garden Room · Aviary Room · Asian Room · Angel Room · Rose Suite",
+    "summary": "Next available stay · Wednesday, Sep 16 · Garden Room · Aviary Room · Asian Room · Angel Room",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Sep 15.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-09-15&end_date=2026-09-16&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Sep 16.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-09-16&end_date=2026-09-17&number_of_adults=2&number_of_children=0"
   }
 }
