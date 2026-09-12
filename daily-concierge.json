@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11",
+  "updated": "2026-09-12",
   "events": {
     "2026-09-11": [
       "Sep 11 An Evening with Groucho · 6:00 PM"
@@ -211,9 +211,9 @@
     ]
   },
   "availability": {
-    "summary": "Next available stay · Friday, Sep 18 · Aviary Room · Angel Room · Blue Room",
+    "summary": "Next available stay · Saturday, Sep 19 · Aviary Room · Angel Room",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Sep 18.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-09-18&end_date=2026-09-19&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Sep 19.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-09-19&end_date=2026-09-20&number_of_adults=2&number_of_children=0"
   }
 }
