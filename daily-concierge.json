@@ -1,10 +1,6 @@
 {
-  "updated": "2026-09-15",
+  "updated": "2026-09-16",
   "events": {
-    "2026-09-15": [
-      "Sep 15 Ghost The Musical · 2:00 PM",
-      "Sep 15 Ghost The Musical · 7:30 PM"
-    ],
     "2026-09-16": [
       "Sep 16 Ghost The Musical · 7:30 PM"
     ],
@@ -141,6 +137,10 @@
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
     ],
+    "2026-09-15": [
+      "Sep 15 Ghost The Musical · 7:30 PM",
+      "Sep 15 Ghost The Musical · 2:00 PM"
+    ],
     "2026-09-13": [
       "Sep 13 Ghost The Musical · 2:00 PM"
     ],
@@ -198,17 +198,13 @@
     ],
     "2026-08-27": [
       "Aug 27 1776 · 8:00 PM",
-      "Aug 27 Snow White · 6:00 PM",
-      "Aug 27 1776 · 2:00 PM"
-    ],
-    "2026-08-26": [
-      "Aug 26 1776 · 8:00 PM"
+      "Aug 27 Snow White · 6:00 PM"
     ]
   },
   "availability": {
-    "summary": "Next available stay · Tuesday, Sep 22 · Dome Room · Garden Room · Aviary Room · Opulent Room",
+    "summary": "Next available stay · Wednesday, Sep 23 · Dome Room · Garden Room · Aviary Room · Angel Room · Blue Room · Rose Suite",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Sep 22.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-09-22&end_date=2026-09-23&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Sep 23.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-09-23&end_date=2026-09-24&number_of_adults=2&number_of_children=0"
   }
 }
