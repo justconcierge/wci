@@ -43,7 +43,7 @@
   </style>
   <script>document.addEventListener('DOMContentLoaded',()=>{const domeNote=document.querySelector('.return-stay .return-event span');if(domeNote)domeNote.textContent='Floor-to-ceiling ocean-view windows!'})</script>
   <style>.home-quote p{font-size:22px!important;line-height:1.42}#dailyQuoteSource{font-size:14px}.new-ribbon{display:block;width:100%;margin:0 0 12px;padding:13px 18px;border:1px solid #b79c62;border-radius:13px;background:#fff8e8;color:#573e17;text-align:center;font:700 17px/1.35 Arial,sans-serif;box-shadow:0 4px 11px #061a2014}.new-ribbon:hover{background:#fff1ce}.return-stay{margin:12px 0!important;padding:18px 22px!important}.return-stay h2{margin:4px 0 7px!important}.return-stay .return-event{margin-top:9px;padding-top:0!important;border-top:0!important}</style>
-  <script>document.addEventListener('DOMContentLoaded',()=>{const grid=document.querySelector('#home .home-grid'),stay=document.querySelector('.return-stay');document.querySelector('.new-ribbon')?.remove();document.querySelector('.return-stay small')?.remove();document.querySelector('.return-book')?.remove();const dates=document.querySelector('.return-stay>p');if(dates)dates.textContent='Next available stay · Monday, Aug. 10–Friday, Aug. 14 · Dome Room · Asian Room';const events=stay?.querySelectorAll('.return-event');if(events?.[0]){const link=events[0].querySelector('a'),note=events[0].querySelector('span');if(link){link.href='https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-10&end_date=2026-08-14&number_of_adults=2&number_of_children=0';link.textContent='Four nights in Beach Haven'}if(note)note.textContent='The Dome Room and Asian Room are both available Monday through Thursday night.'}events?.forEach((event,index)=>{if(index>0)event.remove()});if(grid&&stay)grid.insertAdjacentElement('beforebegin',stay);const day=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York'}).format(new Date()),started=day();setInterval(()=>{if(day()!==started)location.reload()},60000)})</script>
+  <script>document.addEventListener('DOMContentLoaded',()=>{const grid=document.querySelector('#home .home-grid'),stay=document.querySelector('.return-stay');document.querySelector('.new-ribbon')?.remove();document.querySelector('.return-stay small')?.remove();document.querySelector('.return-book')?.remove();const dates=document.querySelector('.return-stay>p');if(dates)dates.textContent='Available Sunday, August 31 through Wednesday, September 2';const events=stay?.querySelectorAll('.return-event');if(events?.[0]){const link=events[0].querySelector('a'),note=events[0].querySelector('span');if(link){link.href='https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-31&end_date=2026-09-02&number_of_adults=2&number_of_children=0';link.textContent='Book one of five available rooms'}if(note)note.textContent='Garden, Aviary, Asian, Angel, and Rose Suite are currently available for this two-night stay.'}events?.forEach((event,index)=>{if(index>0)event.remove()});if(grid&&stay)grid.insertAdjacentElement('beforebegin',stay);const day=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York'}).format(new Date()),started=day();setInterval(()=>{if(day()!==started)location.reload()},60000)})</script>
   <style>.new-ribbon{font:italic 20px/1.42 Georgia,serif}</style><script>document.addEventListener('DOMContentLoaded',()=>{const q=[['“The cure for anything is salt water—sweat, tears, or the sea.”','— Isak Dinesen'],['“It’s always a sunny day in Beach Haven.”','— Walter “Skip” Smedly Jr., Little Egg Harbor Yacht Club Commodore, 1967'],['“The sea, once it casts its spell, holds one in its net of wonder forever.”','— Jacques Cousteau'],['“The ocean stirs the heart, inspires the imagination and brings eternal joy to the soul.”','— Robert Wyland']][Math.floor(Date.now()/86400000)%4],t=document.getElementById('dailyQuote'),s=document.getElementById('dailyQuoteSource');if(t)t.textContent=q[0];if(s)s.textContent=q[1]})</script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const beachCopy=['Available at check-in.','Closet to the left of the front door before exiting.','In the backyard beside the outdoor shower.','In the outdoor bin.','Rinse your feet at the outdoor shower. Hang beach towels outside to dry and help keep sand out of the inn.','Wipe sandy items with a towel; shake it out and hang it outside. Or rinse items and leave them outside to dry.'];document.querySelectorAll('#beach .card p').forEach((paragraph,index)=>{if(beachCopy[index])paragraph.textContent=beachCopy[index]})})</script>
   <script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.bottom-breadcrumb').forEach(item=>item.remove());const goHome=()=>show('home');document.querySelector('.mast')?.addEventListener('click',goHome);document.querySelector('.kiosk-footer')?.addEventListener('click',event=>{if(event.target.closest('.footer-address')&&!event.target.closest('button'))goHome()})})</script>
@@ -552,10 +552,14 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const stay = document.querySelector('.return-stay');
-    const detailText = 'The Dome Room and Asian Room are both available Monday, August 10 through Friday, August 14.';
+    const summaryText = 'Available Sunday, August 31 through Wednesday, September 2';
+    const detailText = 'Garden, Aviary, Asian, Angel, and Rose Suite are currently available for this two-night stay.';
+    const availabilityUrl = 'https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-31&end_date=2026-09-02&number_of_adults=2&number_of_children=0';
     const simplifyStay = () => {
-      stay?.querySelector('p')?.remove();
-      stay?.querySelector('.return-event a')?.remove();
+      const summary = stay?.querySelector('p');
+      if (summary && summary.textContent !== summaryText) summary.textContent = summaryText;
+      const link = stay?.querySelector('.return-event a');
+      if (link) { link.href = availabilityUrl; link.textContent = 'Book one of five available rooms'; }
       const detail = stay?.querySelector('.return-event span');
       if (detail && detail.textContent !== detailText) detail.textContent = detailText;
     };
@@ -949,3 +953,47 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
   });
 </script>
 </html>
+<style>
+  /* The concierge opens directly to the guest portal. */
+  #home .return-stay{margin-top:14px!important}
+  #home .return-stay p{max-width:800px}
+  #home .weekly-pick[data-engleside-pick]{width:100%;grid-template-columns:minmax(0,1fr)}
+  #home .weekly-pick[data-engleside-pick] figure{display:none}
+  #home .weekly-pick[data-engleside-pick] .weekly-pick-copy{padding:20px 22px}
+  #home .weekly-pick[data-engleside-pick] h2{margin:5px 0 8px;font-size:31px}
+  #home .weekly-pick[data-engleside-pick] p{margin:0;font:20px/1.42 Arial,sans-serif;color:#263a34}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Remove the public welcome screen so this kiosk always opens on the guest portal.
+    document.getElementById('welcome')?.remove();
+    document.getElementById('home')?.classList.add('active');
+
+    // Name-free availability messaging, checked against the public booking calendar on Sept. 17.
+    const stay = document.querySelector('#home .return-stay');
+    if (stay) {
+      const heading = stay.querySelector('h2');
+      const availability = stay.querySelector(':scope > p');
+      const details = stay.querySelector('.return-event');
+      if (heading) heading.textContent = 'Come back to Beach Haven.';
+      if (availability) availability.textContent = 'Rooms are available over the next three weeks, with especially good choices beginning Saturday, September 19.';
+      if (details) {
+        const link = details.querySelector('a');
+        const note = details.querySelector('span');
+        if (link) {
+          link.href = 'https://secure.thinkreservations.com/williamscottageinn/reservations';
+          link.textContent = 'View current availability and book';
+        }
+        if (note) note.textContent = 'Plan an early-fall return, or reserve your favorite dates for summer 2027.';
+      }
+      stay.querySelectorAll('.return-event').forEach((item, index) => { if (index > 0) item.remove(); });
+    }
+
+    // Replace the former restaurant feature with the current weekly recommendation.
+    const pick = document.querySelector('#home [data-engleside-pick]');
+    if (pick) {
+      pick.setAttribute('aria-label', "Ellis' Chicken and Crab, pick of the week");
+      pick.innerHTML = `<div class="weekly-pick-copy"><span class="weekly-pick-eyebrow">Pick of the week</span><h2>Ellis' Chicken &amp; Crab</h2><p>Take out or sit down. Menus are behind the iPad.</p></div>`;
+    }
+  });
+</script>
