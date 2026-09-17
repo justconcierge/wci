@@ -875,23 +875,6 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
   #welcome .welcome-note{margin:0;color:#344b40;font:16px/1.4 Arial,sans-serif}
   @media(max-width:680px){#welcome{padding:0 8px 12px}#welcome .welcome-card{border-radius:16px}#welcome .welcome-actions{padding:14px;flex-direction:column}#welcome .guest-portal-button{width:100%;font-size:18px}}
 </style>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const home = document.getElementById('home');
-    if (!home || document.getElementById('welcome')) return;
-    const welcome = document.createElement('section');
-    welcome.id = 'welcome';
-    welcome.className = 'screen active';
-    welcome.setAttribute('aria-label', 'Williams Cottage Inn welcome');
-    welcome.innerHTML = '<div class="welcome-card"><img src="beach-bites-wcilbi.jpg" alt="Williams Cottage Inn Beach Bites healthy menu"><div class="welcome-actions"><a class="instagram-home-link" href="https://www.instagram.com/wcilbi/" target="_blank" rel="noopener" aria-label="Follow @wcilbi on Instagram"><span class="instagram-logo" aria-hidden="true"></span> Follow @wcilbi</a><button class="guest-portal-button" type="button">Guest portal</button><p class="welcome-note">Already staying with us? Find your inn guide, check in, and more.</p></div></div>';
-    home.before(welcome);
-    home.classList.remove('active');
-    welcome.querySelector('.guest-portal-button').addEventListener('click', () => show('home'));
-    const menu = home.querySelector('.home-grid');
-    const concert = home.querySelector('.candlelight-event');
-    if (menu && concert) menu.insertAdjacentElement('afterend', concert);
-  });
-</script>
 <style>
   .instagram-logo{position:relative;display:inline-block;width:24px;height:24px;border:2px solid currentColor;border-radius:7px;vertical-align:middle}
   .instagram-logo::before{content:'';position:absolute;left:50%;top:50%;width:8px;height:8px;border:2px solid currentColor;border-radius:50%;transform:translate(-50%,-50%)}
