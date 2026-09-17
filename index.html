@@ -43,7 +43,7 @@
   </style>
   <script>document.addEventListener('DOMContentLoaded',()=>{const domeNote=document.querySelector('.return-stay .return-event span');if(domeNote)domeNote.textContent='Floor-to-ceiling ocean-view windows!'})</script>
   <style>.home-quote p{font-size:22px!important;line-height:1.42}#dailyQuoteSource{font-size:14px}.new-ribbon{display:block;width:100%;margin:0 0 12px;padding:13px 18px;border:1px solid #b79c62;border-radius:13px;background:#fff8e8;color:#573e17;text-align:center;font:700 17px/1.35 Arial,sans-serif;box-shadow:0 4px 11px #061a2014}.new-ribbon:hover{background:#fff1ce}.return-stay{margin:12px 0!important;padding:18px 22px!important}.return-stay h2{margin:4px 0 7px!important}.return-stay .return-event{margin-top:9px;padding-top:0!important;border-top:0!important}</style>
-  <script>document.addEventListener('DOMContentLoaded',()=>{const grid=document.querySelector('#home .home-grid'),stay=document.querySelector('.return-stay');document.querySelector('.new-ribbon')?.remove();document.querySelector('.return-stay small')?.remove();document.querySelector('.return-book')?.remove();const dates=document.querySelector('.return-stay>p');if(dates)dates.textContent='Available Sunday, August 31 through Wednesday, September 2';const events=stay?.querySelectorAll('.return-event');if(events?.[0]){const link=events[0].querySelector('a'),note=events[0].querySelector('span');if(link){link.href='https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-31&end_date=2026-09-02&number_of_adults=2&number_of_children=0';link.textContent='Book one of five available rooms'}if(note)note.textContent='Garden, Aviary, Asian, Angel, and Rose Suite are currently available for this two-night stay.'}events?.forEach((event,index)=>{if(index>0)event.remove()});if(grid&&stay)grid.insertAdjacentElement('beforebegin',stay);const day=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York'}).format(new Date()),started=day();setInterval(()=>{if(day()!==started)location.reload()},60000)})</script>
+  <script>document.addEventListener('DOMContentLoaded',()=>{const grid=document.querySelector('#home .home-grid'),stay=document.querySelector('.return-stay');document.querySelector('.new-ribbon')?.remove();document.querySelector('.return-stay small')?.remove();document.querySelector('.return-book')?.remove();const dates=document.querySelector('.return-stay>p');if(dates)dates.textContent='Next available stay · Monday, Aug. 10–Friday, Aug. 14 · Dome Room · Asian Room';const events=stay?.querySelectorAll('.return-event');if(events?.[0]){const link=events[0].querySelector('a'),note=events[0].querySelector('span');if(link){link.href='https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-10&end_date=2026-08-14&number_of_adults=2&number_of_children=0';link.textContent='Four nights in Beach Haven'}if(note)note.textContent='The Dome Room and Asian Room are both available Monday through Thursday night.'}events?.forEach((event,index)=>{if(index>0)event.remove()});if(grid&&stay)grid.insertAdjacentElement('beforebegin',stay);const day=()=>new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York'}).format(new Date()),started=day();setInterval(()=>{if(day()!==started)location.reload()},60000)})</script>
   <style>.new-ribbon{font:italic 20px/1.42 Georgia,serif}</style><script>document.addEventListener('DOMContentLoaded',()=>{const q=[['“The cure for anything is salt water—sweat, tears, or the sea.”','— Isak Dinesen'],['“It’s always a sunny day in Beach Haven.”','— Walter “Skip” Smedly Jr., Little Egg Harbor Yacht Club Commodore, 1967'],['“The sea, once it casts its spell, holds one in its net of wonder forever.”','— Jacques Cousteau'],['“The ocean stirs the heart, inspires the imagination and brings eternal joy to the soul.”','— Robert Wyland']][Math.floor(Date.now()/86400000)%4],t=document.getElementById('dailyQuote'),s=document.getElementById('dailyQuoteSource');if(t)t.textContent=q[0];if(s)s.textContent=q[1]})</script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const beachCopy=['Available at check-in.','Closet to the left of the front door before exiting.','In the backyard beside the outdoor shower.','In the outdoor bin.','Rinse your feet at the outdoor shower. Hang beach towels outside to dry and help keep sand out of the inn.','Wipe sandy items with a towel; shake it out and hang it outside. Or rinse items and leave them outside to dry.'];document.querySelectorAll('#beach .card p').forEach((paragraph,index)=>{if(beachCopy[index])paragraph.textContent=beachCopy[index]})})</script>
   <script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.bottom-breadcrumb').forEach(item=>item.remove());const goHome=()=>show('home');document.querySelector('.mast')?.addEventListener('click',goHome);document.querySelector('.kiosk-footer')?.addEventListener('click',event=>{if(event.target.closest('.footer-address')&&!event.target.closest('button'))goHome()})})</script>
@@ -51,7 +51,7 @@
   <script>document.addEventListener('DOMContentLoaded',()=>{const footer=document.querySelector('.kiosk-footer');if(footer&&!footer.querySelector('.footer-address'))footer.innerHTML='<div class="footer-address"><b>506 South Atlantic Avenue</b><span>Beach Haven · Long Beach Island</span><span id="footerPhone" class="footer-phone"></span><button class="support-button" onclick="show(\'support\')">Contact innkeeper</button></div><a class="rebook-footer" href="https://www.williamscottageinn.com/" target="_blank" rel="noopener">We are open all year + accepting reservations for summer 2027</a><button class="staff-access" onclick="show(\'staff-login\')">Innkeeper access</button>';refreshGuestSettings()})</script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const breakfastFooter=document.querySelector('#breakfast-time .footer-row');if(breakfastFooter)breakfastFooter.innerHTML='<button class="primary" id="timeNext" disabled onclick="confirmBreakfastAtTime()">Confirm breakfast</button><button class="quiet" onclick="confirmBreakfastAtTime(\'Vegan\')">Request vegan</button><button class="quiet" onclick="confirmBreakfastAtTime(\'Gluten-free\')">Request gluten-free</button>';window.confirmBreakfastAtTime=(diet='No dietary restrictions')=>{if(!state.time){alert('Please select a breakfast time first.');return}state.diet=diet;newItem('Breakfast',`${state.time} · ${state.diet}`,'');showConfirmation('Breakfast confirmed.',`${state.room}: ${state.time}, ${state.diet.toLowerCase()}.`)}})</script>
   <script>document.addEventListener('DOMContentLoaded',()=>{const baseShow=window.show;window.show=(id=>{baseShow(id);if(id==='breakfast-diet'){state.diet='No dietary restrictions';const options=document.querySelectorAll('#breakfast-diet .option');options.forEach(option=>option.classList.remove('selected'));if(options[0])options[0].classList.add('selected')}})})</script>
-  <script>document.addEventListener('DOMContentLoaded',()=>{const home=document.getElementById('home'),moveBanner=()=>{const banner=document.getElementById('todayStrip'),week=document.getElementById('weekAhead'),first=week||banner;if(home&&first&&home.firstElementChild!==first)home.insertBefore(first,home.firstElementChild)};if(home)new MutationObserver(moveBanner).observe(home,{childList:true});moveBanner();const tides=document.getElementById('tideToday');if(tides){const simplify=()=>tides.querySelectorAll('strong').forEach(item=>{if(item.textContent.includes(' Tide'))item.textContent=item.textContent.replace(' Tide','')});new MutationObserver(simplify).observe(tides,{childList:true,subtree:true,characterData:true});simplify()}const departure=document.querySelector('#stay .card p');if(departure&&departure.firstChild)departure.firstChild.textContent='Check-out by ';const breakfastConfirm=document.getElementById('dietNext');if(breakfastConfirm)breakfastConfirm.disabled=false;window.sendBreakfast=()=>{if(!state.diet)state.diet='No dietary restrictions';const note=document.getElementById('dietNote').value.trim();newItem('Breakfast',`${state.time} · ${state.diet}`,note);showConfirmation('Breakfast confirmed.',`${state.room}: ${state.time}, ${state.diet.toLowerCase()}.${note?' Your additional note was included.':''}`)}})</script>
+  <script>document.addEventListener('DOMContentLoaded',()=>{const home=document.getElementById('home'),moveBanner=()=>{const banner=document.getElementById('todayStrip');if(home&&banner&&home.firstElementChild!==banner)home.insertBefore(banner,home.firstElementChild)};if(home)new MutationObserver(moveBanner).observe(home,{childList:true});moveBanner();const tides=document.getElementById('tideToday');if(tides){const simplify=()=>tides.querySelectorAll('strong').forEach(item=>{if(item.textContent.includes(' Tide'))item.textContent=item.textContent.replace(' Tide','')});new MutationObserver(simplify).observe(tides,{childList:true,subtree:true,characterData:true});simplify()}const departure=document.querySelector('#stay .card p');if(departure&&departure.firstChild)departure.firstChild.textContent='Check-out by ';const breakfastConfirm=document.getElementById('dietNext');if(breakfastConfirm)breakfastConfirm.disabled=false;window.sendBreakfast=()=>{if(!state.diet)state.diet='No dietary restrictions';const note=document.getElementById('dietNote').value.trim();newItem('Breakfast',`${state.time} · ${state.diet}`,note);showConfirmation('Breakfast confirmed.',`${state.room}: ${state.time}, ${state.diet.toLowerCase()}.${note?' Your additional note was included.':''}`)}})</script>
   <style>
     .weekly-pick{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(230px,.92fr);margin:14px 0 22px;border:1px solid #b9d2ca;border-radius:16px;overflow:hidden;background:#fffdf7;color:#102f38;box-shadow:0 6px 15px #061a2015}
     .weekly-pick-copy{padding:22px 24px;align-self:center}.weekly-pick-eyebrow{display:block;color:#a34536;font:700 13px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}.weekly-pick h2{margin:6px 0 9px;font:normal 30px/1.1 Georgia,serif}.weekly-pick p{margin:0;color:#35545b;font:17px/1.45 Arial,sans-serif}.weekly-pick a{display:inline-block;margin-top:14px;color:#fff;background:#073c4a;border-radius:10px;padding:11px 15px;text-decoration:none;font:700 16px/1.2 Arial,sans-serif}.weekly-pick figure{margin:0;min-height:205px;background:#173f49}.weekly-pick img{display:block;width:100%;height:100%;min-height:205px;object-fit:cover;object-position:center}
@@ -552,14 +552,10 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const stay = document.querySelector('.return-stay');
-    const summaryText = 'Available Sunday, August 31 through Wednesday, September 2';
-    const detailText = 'Garden, Aviary, Asian, Angel, and Rose Suite are currently available for this two-night stay.';
-    const availabilityUrl = 'https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-08-31&end_date=2026-09-02&number_of_adults=2&number_of_children=0';
+    const detailText = 'The Dome Room and Asian Room are both available Monday, August 10 through Friday, August 14.';
     const simplifyStay = () => {
-      const summary = stay?.querySelector('p');
-      if (summary && summary.textContent !== summaryText) summary.textContent = summaryText;
-      const link = stay?.querySelector('.return-event a');
-      if (link) { link.href = availabilityUrl; link.textContent = 'Book one of five available rooms'; }
+      stay?.querySelector('p')?.remove();
+      stay?.querySelector('.return-event a')?.remove();
       const detail = stay?.querySelector('.return-event span');
       if (detail && detail.textContent !== detailText) detail.textContent = detailText;
     };
@@ -799,184 +795,5 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
     };
   });
 </script>
-<style>
-  #store .relax-feature-art{margin:0 0 22px;border:1px solid #bdc9ac;border-radius:16px;overflow:hidden;background:#fffef7;box-shadow:0 7px 18px rgba(34,47,40,.13)}
-  #store .relax-feature-art img{display:block;width:100%;max-height:310px;object-fit:cover;object-position:center 58%}
-</style>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const heading = document.querySelector('#store .store-heading');
-    const content = document.getElementById('storeContent');
-    if (heading && content && !document.querySelector('#store .relax-feature-art')) {
-      const feature = document.createElement('figure');
-      feature.className = 'relax-feature-art';
-      feature.innerHTML = '<img src="relax-and-recover-feature.png" alt="Relax and recover collection with water bottles, a wellness smoothie, eye mask, and organza pouch">';
-      content.before(feature);
-    }
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const waterBottleImage = document.querySelector('.well-showcase figure:nth-child(2) img');
-    if (waterBottleImage) {
-      waterBottleImage.src = 'thermoflask-relax-and-recover.png';
-      waterBottleImage.alt = 'Black and rose ThermoFlask water bottles with a sleep set and cottage comforts';
-    }
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('h2').forEach(heading => {
-      if (heading.textContent.trim() === 'Engleside Inn') heading.textContent = 'Engleside';
-    });
-    document.querySelectorAll('img[alt*="Engleside Inn"]').forEach(image => {
-      image.alt = image.alt.replace('Engleside Inn', 'Engleside');
-    });
-  });
-</script>
-<style>
-  #home .candlelight-event{margin:0 0 12px;padding:0;border:2px solid #7b423b;border-radius:16px;background:linear-gradient(125deg,#fff9ed,#efe3c8);color:#263a34;box-shadow:0 7px 18px rgba(34,47,40,.16);overflow:hidden}
-  #home .candlelight-event-inner{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(240px,.7fr);align-items:stretch}
-  #home .candlelight-event-copy{padding:19px 22px}
-  #home .candlelight-event figure{margin:0;min-height:200px;background:#21130d}
-  #home .candlelight-event figure img{display:block;width:100%;height:100%;min-height:200px;object-fit:cover;object-position:center}
-  #home .candlelight-event span{display:block;color:#7b423b;font:800 15px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
-  #home .candlelight-event h2{margin:6px 0;font:normal 29px/1.12 Georgia,serif}
-  #home .candlelight-event p{margin:0;color:#365448;font:17px/1.4 Arial,sans-serif}
-  #home .candlelight-event a{display:inline-block;margin-top:12px;color:#fff!important;background:#7b423b;border-radius:999px;padding:10px 15px;font:700 15px/1 Arial,sans-serif;text-decoration:none}
-  @media (max-width:700px){#home .candlelight-event-inner{grid-template-columns:1fr}#home .candlelight-event figure{min-height:180px}#home .candlelight-event figure img{min-height:180px}}
-</style>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const nextStay = document.querySelector('#home .return-stay');
-    if (!nextStay || document.querySelector('#home .candlelight-event')) return;
-    const event = document.createElement('section');
-    event.className = 'candlelight-event';
-    event.setAttribute('aria-label', 'LBI Historical Museum Candlelight Concert');
-    event.innerHTML = '<div class="candlelight-event-inner"><div class="candlelight-event-copy"><span>Chowderfest weekend · Friday, October 2</span><h2>LBIHA’s Candlelight Concert</h2><p>Four Shore Strings, champagne, cheese boards, and candlelit music at the LBI Historical Museum. Doors open at 5:30 PM. Tickets just $45. All rooms except the Dome are still available for Chowderfest weekend.</p><a href="https://www.lbihistoricalmuseum.org/event-details/lbihas-candlelight-concert" target="_blank" rel="noopener">Event details &amp; tickets</a> <a href="https://www.bhchowdercookoff.com/" target="_blank" rel="noopener">Chowderfest details</a></div><figure><img src="candlelight-concert.png" alt="Cello surrounded by candlelight at the LBI Historical Museum Candlelight Concert"></figure></div>';
-    nextStay.before(event);
-  });
-</script>
 </body>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const concertPhoto = document.querySelector('#home .candlelight-event figure img');
-    if (concertPhoto) concertPhoto.src = 'candlelight-concert.jpg';
-  });
-</script>
-<style>
-  /* New welcome screen: the established dashboard remains the Guest portal. */
-  #welcome{max-width:1180px;margin:0 auto;padding:0 0 16px}
-  #welcome .welcome-card{overflow:hidden;border:1px solid rgba(255,255,255,.55);border-radius:22px;background:#fffdf7;box-shadow:0 18px 46px rgba(6,26,32,.32)}
-  #welcome .welcome-card img{display:block;width:100%;height:auto;background:#fffdf7}
-  #welcome .welcome-actions{display:flex;align-items:center;justify-content:center;gap:14px;padding:18px 22px;background:linear-gradient(120deg,#f7f2e7,#e1ead0)}
-  #welcome .guest-portal-button{border:0;border-radius:999px;padding:15px 29px;background:#173b2c;color:#fffdf7;font:700 19px/1 Arial,sans-serif;letter-spacing:.02em;box-shadow:0 3px 0 #0d261c}
-  #welcome .guest-portal-button:hover{background:#295541}
-  #welcome .welcome-note{margin:0;color:#344b40;font:16px/1.4 Arial,sans-serif}
-  @media(max-width:680px){#welcome{padding:0 8px 12px}#welcome .welcome-card{border-radius:16px}#welcome .welcome-actions{padding:14px;flex-direction:column}#welcome .guest-portal-button{width:100%;font-size:18px}}
-</style>
-<style>
-  .instagram-logo{position:relative;display:inline-block;width:24px;height:24px;border:2px solid currentColor;border-radius:7px;vertical-align:middle}
-  .instagram-logo::before{content:'';position:absolute;left:50%;top:50%;width:8px;height:8px;border:2px solid currentColor;border-radius:50%;transform:translate(-50%,-50%)}
-  .instagram-logo::after{content:'';position:absolute;right:3px;top:3px;width:3px;height:3px;border-radius:50%;background:currentColor}
-  #welcome .instagram-home-link{display:inline-flex;align-items:center;gap:8px;color:#7b423b;font:700 15px/1 Arial,sans-serif;text-decoration:none}
-  #welcome .instagram-home-link:hover{text-decoration:underline;text-underline-offset:4px}
-  .footer-instagram-link{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 auto 13px;color:#fffef7;font:700 15px/1 Arial,sans-serif;text-decoration:none}
-  .footer-instagram-link:hover{text-decoration:underline;text-underline-offset:4px}
-  .footer-instagram-qr{display:block;width:92px;height:92px;object-fit:contain;margin:0 auto 14px;border-radius:8px;background:#fff}
-</style>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const footer = document.querySelector('.footer-address');
-    const contact = footer?.querySelector('.support-button');
-    if (footer && contact && !footer.querySelector('.footer-instagram-link')) {
-      contact.insertAdjacentHTML('beforebegin', '<a class="footer-instagram-link" href="https://www.instagram.com/wcilbi/" target="_blank" rel="noopener"><span class="instagram-logo" aria-hidden="true"></span> Follow @wcilbi</a><a href="https://www.instagram.com/wcilbi/" target="_blank" rel="noopener" aria-label="Open @wcilbi on Instagram"><img class="footer-instagram-qr" src="wcilbi-instagram-qr-small.png" alt="QR code for @wcilbi on Instagram"></a>');
-    }
-  });
-</script>
-<style>
-  .week-ahead{margin:0 0 14px;padding:16px 18px;border:1px solid #b9c99e;border-radius:16px;background:#e4ecd0;color:#263a34;box-shadow:0 5px 14px rgba(23,55,64,.1)}
-  .week-ahead h2{margin:0 0 11px;font:normal 23px/1.1 Georgia,serif}
-  .week-ahead-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
-  .week-ahead-day{min-width:0;padding:9px 6px;border:1px solid #c5d1b8;border-radius:10px;background:#fffef9;text-align:center}
-  .week-ahead-day b{display:block;color:#7b423b;font:700 13px/1.15 Arial,sans-serif;text-transform:uppercase}
-  .week-ahead-day span{display:block;margin:5px 0;color:#263a34;font:700 15px/1.2 Arial,sans-serif}
-  .week-ahead-day small{display:block;color:#4a5d50;font:12px/1.25 Arial,sans-serif}
-  @media(max-width:680px){.week-ahead-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.week-ahead{padding:14px}}
-</style>
-<script>
-  document.addEventListener('DOMContentLoaded', async () => {
-    const today = document.getElementById('todayStrip');
-    const home = document.getElementById('home');
-    if (!today || !home || document.getElementById('weekAhead')) return;
-    const week = document.createElement('section');
-    week.id = 'weekAhead';
-    week.className = 'week-ahead';
-    week.innerHTML = '<h2>This week in Beach Haven</h2><div class="week-ahead-grid"></div>';
-    today.before(week);
-    const grid = week.querySelector('.week-ahead-grid');
-    const weekday = date => new Intl.DateTimeFormat('en-US', { weekday: 'short', timeZone: 'America/New_York' }).format(new Date(date + 'T12:00:00'));
-    const loadingDays = Array.from({ length: 7 }, (_, index) => {
-      const day = new Date(Date.now() + index * 86400000);
-      return new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York' }).format(day);
-    });
-    grid.innerHTML = loadingDays.map(day => `<article class="week-ahead-day"><b>${weekday(day)}</b><span>—</span><small>Loading</small></article>`).join('');
-    try {
-      const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=39.5596&longitude=-74.2435&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&temperature_unit=fahrenheit&timezone=America%2FNew_York&forecast_days=7');
-      const forecast = await response.json();
-      if (!forecast.daily?.time) throw new Error('Forecast unavailable');
-      grid.innerHTML = forecast.daily.time.map((day, index) => {
-        const chance = forecast.daily.precipitation_probability_max[index];
-        const description = weatherLabel(forecast.daily.weather_code[index]);
-        return `<article class="week-ahead-day"><b>${weekday(day)}</b><span>${Math.round(forecast.daily.temperature_2m_max[index])}° / ${Math.round(forecast.daily.temperature_2m_min[index])}°</span><small>${description}${chance ? ` · ${chance}% rain` : ''}</small></article>`;
-      }).join('');
-    } catch (_) {
-      grid.innerHTML = '<p class="small">The week-ahead forecast is temporarily unavailable.</p>';
-    }
-  });
-</script>
 </html>
-<style>
-  /* The concierge opens directly to the guest portal. */
-  #home .return-stay{margin-top:14px!important}
-  #home .return-stay p{max-width:800px}
-  #home .weekly-pick[data-engleside-pick]{width:100%;grid-template-columns:minmax(0,1fr)}
-  #home .weekly-pick[data-engleside-pick] figure{display:none}
-  #home .weekly-pick[data-engleside-pick] .weekly-pick-copy{padding:20px 22px}
-  #home .weekly-pick[data-engleside-pick] h2{margin:5px 0 8px;font-size:31px}
-  #home .weekly-pick[data-engleside-pick] p{margin:0;font:20px/1.42 Arial,sans-serif;color:#263a34}
-</style>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Remove the public welcome screen so this kiosk always opens on the guest portal.
-    document.getElementById('welcome')?.remove();
-    document.getElementById('home')?.classList.add('active');
-
-    // Name-free availability messaging, checked against the public booking calendar on Sept. 17.
-    const stay = document.querySelector('#home .return-stay');
-    if (stay) {
-      const heading = stay.querySelector('h2');
-      const availability = stay.querySelector(':scope > p');
-      const details = stay.querySelector('.return-event');
-      if (heading) heading.textContent = 'Come back to Beach Haven.';
-      if (availability) availability.textContent = 'Rooms are available over the next three weeks, with especially good choices beginning Saturday, September 19.';
-      if (details) {
-        const link = details.querySelector('a');
-        const note = details.querySelector('span');
-        if (link) {
-          link.href = 'https://secure.thinkreservations.com/williamscottageinn/reservations';
-          link.textContent = 'View current availability and book';
-        }
-        if (note) note.textContent = 'Plan an early-fall return, or reserve your favorite dates for summer 2027.';
-      }
-      stay.querySelectorAll('.return-event').forEach((item, index) => { if (index > 0) item.remove(); });
-    }
-
-    // Replace the former restaurant feature with the current weekly recommendation.
-    const pick = document.querySelector('#home [data-engleside-pick]');
-    if (pick) {
-      pick.setAttribute('aria-label', "Ellis' Chicken and Crab, pick of the week");
-      pick.innerHTML = `<div class="weekly-pick-copy"><span class="weekly-pick-eyebrow">Pick of the week</span><h2>Ellis' Chicken &amp; Crab</h2><p>Take out or sit down. Menus are behind the iPad.</p></div>`;
-    }
-  });
-</script>
