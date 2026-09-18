@@ -795,5 +795,54 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
     };
   });
 </script>
+
+<style>
+  #home .return-stay .return-event{margin-top:12px;padding-top:12px;border-top:1px solid #9ebbb2}
+  #home .return-stay .return-event a{display:inline-block}
+  #home .candlelight-event{margin:14px 0;padding:0;border:2px solid #7b423b;border-radius:16px;overflow:hidden;background:linear-gradient(125deg,#fff9ed,#efe3c8);box-shadow:0 7px 18px rgba(34,47,40,.16)}
+  #home .candlelight-event-inner{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(220px,.7fr)}
+  #home .candlelight-event-copy{padding:19px 22px}
+  #home .candlelight-event-copy span{display:block;color:#7b423b;font:800 15px/1.2 Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+  #home .candlelight-event-copy h2{margin:6px 0;font:normal 29px/1.12 Georgia,serif}
+  #home .candlelight-event-copy p{margin:0;color:#365448;font:17px/1.4 Arial,sans-serif}
+  #home .candlelight-event-copy a{display:inline-block;margin-top:12px;background:#7b423b;color:#fff!important;border-radius:999px;padding:10px 15px;font:700 15px/1 Arial,sans-serif;text-decoration:none}
+  #home .candlelight-event figure{margin:0;min-height:200px;background:#21130d}
+  #home .candlelight-event img{display:block;width:100%;height:100%;min-height:200px;object-fit:cover}
+  @media(max-width:700px){#home .candlelight-event-inner{grid-template-columns:1fr}#home .candlelight-event figure,#home .candlelight-event img{min-height:180px}}
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const home = document.getElementById('home');
+    const stay = home?.querySelector('.return-stay');
+    if (stay) {
+      const heading = stay.querySelector('h2');
+      const availability = stay.querySelector(':scope > p');
+      const book = stay.querySelector('.return-book');
+      if (heading) heading.textContent = 'Come back to Beach Haven.';
+      if (availability) availability.textContent = 'Fall dates are available throughout the next three weeks.';
+      if (book) {
+        book.href = 'https://secure.thinkreservations.com/williamscottageinn/reservations';
+        book.textContent = 'View availability and book';
+      }
+      stay.querySelectorAll('.return-event').forEach(item => item.remove());
+      const details = document.createElement('div');
+      details.className = 'return-event';
+      details.innerHTML = '<a href="https://secure.thinkreservations.com/williamscottageinn/reservations" target="_blank" rel="noopener">Plan your next stay</a><span>Return this fall, or reserve your favorite dates for summer 2027.</span>';
+      stay.append(details);
+    }
+    const pick = home?.querySelector('[data-engleside-pick]');
+    if (pick) {
+      pick.setAttribute('aria-label', "Ellis' Chicken and Crab, pick of the week");
+      pick.innerHTML = '<div class="weekly-pick-copy"><span class="weekly-pick-eyebrow">Pick of the week</span><h2>Ellis\' Chicken &amp; Crab</h2><p>Take out or sit down. Menus are behind the iPad.</p></div>';
+    }
+    if (home && !home.querySelector('.candlelight-event')) {
+      const concert = document.createElement('section');
+      concert.className = 'candlelight-event';
+      concert.setAttribute('aria-label', 'LBI Historical Museum Candlelight Concert');
+      concert.innerHTML = '<div class="candlelight-event-inner"><div class="candlelight-event-copy"><span>Chowderfest weekend · Friday, October 2</span><h2>LBIHA’s Candlelight Concert</h2><p>Four Shore Strings, champagne, cheese boards, and candlelit music at the LBI Historical Museum. Doors open at 5:30 PM. Tickets just $45.</p><a href="https://www.lbihistoricalmuseum.org/event-details/lbihas-candlelight-concert" target="_blank" rel="noopener">Event details &amp; tickets</a></div><figure><img src="candlelight-concert.jpg" alt="Cello surrounded by candlelight at the LBI Historical Museum Candlelight Concert"></figure></div>';
+      stay?.before(concert);
+    }
+  });
+</script>
 </body>
 </html>
