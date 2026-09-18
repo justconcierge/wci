@@ -845,4 +845,12 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
   });
 </script>
 </body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const stay = document.querySelector('#home .return-stay');
+    if (!stay) return;
+    stay.innerHTML = '<span class="return-eyebrow">Plan your next stay</span><div class="return-title-row"><h2>Come back to Beach Haven.</h2><a class="return-book-now" href="https://secure.thinkreservations.com/williamscottageinn/reservations" target="_blank" rel="noopener">Book now</a></div><div class="return-event"><a href="https://secure.thinkreservations.com/williamscottageinn/reservations" target="_blank" rel="noopener">View current availability</a><span>Fall dates are available throughout the next three weeks. Return this fall, or reserve your favorite dates for summer 2027.</span></div>';
+  });
+</script>
 </html>
