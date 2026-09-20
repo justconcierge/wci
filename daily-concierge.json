@@ -1,9 +1,6 @@
 {
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "events": {
-    "2026-09-19": [
-      "Sep 19 Ghost The Musical · 7:30 PM"
-    ],
     "2026-09-20": [
       "Sep 20 Ghost The Musical · 2:00 PM"
     ],
@@ -128,6 +125,9 @@
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
     ],
+    "2026-09-19": [
+      "Sep 19 Ghost The Musical · 7:30 PM"
+    ],
     "2026-09-18": [
       "Sep 18 Ghost The Musical · 7:30 PM"
     ],
@@ -191,9 +191,6 @@
     "2026-08-29": [
       "Aug 29 1776 · 8:00 PM",
       "Aug 29 Snow White · 6:00 PM"
-    ],
-    "2026-08-28": [
-      "Aug 28 Comedy night · 8:30 PM"
     ]
   },
   "availability": {
