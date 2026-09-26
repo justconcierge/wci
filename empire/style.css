@@ -37,3 +37,5 @@ main{padding-top:30px}.intro{margin-bottom:24px}.intro h1{font-size:42px;line-he
 .category-branches{grid-template-columns:repeat(4,minmax(0,1fr))}.category-branches.summer-branches{grid-template-columns:repeat(3,minmax(0,1fr))}
 
 .brand img{width:340px;max-width:100%;height:auto;flex-shrink:0}.brand{flex-wrap:wrap}@media(max-width:760px){.brand{width:100%;justify-content:center;text-align:center}.brand img{width:300px;max-width:85vw}.brand>div{width:100%}}@media print{.brand img{width:200px}}
+
+.category-branches.don-branches{grid-template-columns:repeat(3,minmax(0,1fr))}.don-branches .jimTeam{margin:0 4px}.winter-holiday-note{margin:40px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:#657b88}
