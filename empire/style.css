@@ -41,3 +41,5 @@ main{padding-top:30px}.intro{margin-bottom:24px}.intro h1{font-size:42px;line-he
 .category-branches.don-branches{grid-template-columns:repeat(3,minmax(0,1fr))}.don-branches .jimTeam{margin:0 4px}.winter-holiday-note{margin:40px 0 0;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:#657b88}
 
 .category-branches.summer-branches{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+#directory-service-contacts:not(:empty){margin-top:32px}#directory-service-contacts .other-contacts{margin:0}#directory-service-contacts .card{max-width:540px}
