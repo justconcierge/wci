@@ -1,9 +1,6 @@
 {
-  "updated": "2026-09-27",
+  "updated": "2026-09-28",
   "events": {
-    "2026-09-27": [
-      "Sep 27 Vanities: The Musical · 2:00 PM"
-    ],
     "2026-09-29": [
       "Sep 29 Vanities: The Musical · 2:00 PM"
     ],
@@ -39,6 +36,15 @@
     ],
     "2026-10-11": [
       "Oct 11 Deceived · 2:00 PM"
+    ],
+    "2026-10-16": [
+      "Oct 16 Urinetown - Presented Starlight PAC · 7:00 PM"
+    ],
+    "2026-10-17": [
+      "Oct 17 Urinetown - Presented Starlight PAC · 7:00 PM"
+    ],
+    "2026-10-24": [
+      "Oct 24 ALL EXITS - A Statewide Play Reading · 7:00 PM"
     ],
     "2026-11-07": [
       "Nov 7 Comedy Night - Fundraiser for BHVFC · 7:30 PM"
@@ -82,6 +88,7 @@
       "Dec 11 Holiday Inn · 7:30 PM"
     ],
     "2026-12-12": [
+      "Dec 12 Taylor Mason - Holiday Comedy for the Family · 11:00 AM",
       "Dec 12 Holiday Inn · 2:00 PM",
       "Dec 12 Holiday Inn · 7:30 PM"
     ],
@@ -107,6 +114,15 @@
     "2026-12-31": [
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 5:00 PM",
       "Dec 31 NYE Bubbly Bash with the Rave-Ons · 8:00 PM"
+    ],
+    "2027-01-16": [
+      "Jan 16 Comedy Night · 7:30 PM"
+    ],
+    "2027-02-13": [
+      "Feb 13 The Original American Idols - A Celebration of Judy Garland & Barbra Streisand · 2:00 PM"
+    ],
+    "2026-09-27": [
+      "Sep 27 Vanities: The Musical · 2:00 PM"
     ],
     "2026-09-26": [
       "Sep 26 Vanities: The Musical · 7:30 PM"
@@ -174,14 +190,13 @@
     ],
     "2026-09-03": [
       "Sep 3 Ghost The Musical · 8:00 PM",
-      "Sep 3 Little Mermaid · 6:00 PM",
-      "Sep 3 Ghost The Musical · 2:00 PM"
+      "Sep 3 Little Mermaid · 6:00 PM"
     ]
   },
   "availability": {
-    "summary": "Next available stay · Sunday, Oct 4 · Dome Room · Garden Room · Aviary Room · Angel Room · Blue Room · Rose Suite",
+    "summary": "Next available stay · Monday, Oct 5 · Dome Room · Garden Room · Aviary Room · Angel Room · Blue Room · Rose Suite",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Oct 4.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-10-04&end_date=2026-10-05&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Oct 5.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-10-05&end_date=2026-10-06&number_of_adults=2&number_of_children=0"
   }
 }
