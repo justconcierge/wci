@@ -43,3 +43,5 @@ main{padding-top:30px}.intro{margin-bottom:24px}.intro h1{font-size:42px;line-he
 .category-branches.summer-branches{grid-template-columns:repeat(4,minmax(0,1fr))}
 
 #directory-service-contacts:not(:empty){margin-top:32px}#directory-service-contacts .other-contacts{margin:0}#directory-service-contacts .card{max-width:540px}
+
+.intro h1{font:400 16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#536b7b}.intro .context{font:400 42px/1.12 Georgia,serif;color:var(--ink);max-width:680px;margin:0}.intro>div{flex:1}.intro .context{flex:1.5}@media(max-width:760px){.intro .context{font-size:34px}}@media print{.intro .context{font-size:26px}}
