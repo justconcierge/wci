@@ -853,4 +853,58 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
     stay.innerHTML = '<span class="return-eyebrow">Plan your next stay</span><div class="return-title-row"><h2>Come back to Beach Haven.</h2><a class="return-book-now" href="https://secure.thinkreservations.com/williamscottageinn/reservations" target="_blank" rel="noopener">Book now</a></div><div class="return-event"><a href="https://secure.thinkreservations.com/williamscottageinn/reservations" target="_blank" rel="noopener">View current availability</a><span>Fall dates are available throughout the next three weeks. Return this fall, or reserve your favorite dates for summer 2027.</span></div>';
   }, 0);
 </script>
+
+<style>
+  #home .weekend-forecast{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 16px}
+  #home .weekend-forecast-card{padding:14px 16px;border:1px solid #b9d2ca;border-radius:14px;background:#edf5f1;color:#38555c}
+  #home .weekend-forecast-card b{display:block;color:#26483f;font:normal 20px/1.15 Georgia,serif}
+  #home .weekend-forecast-card span{display:block;margin-top:5px;font:15px/1.35 Arial,sans-serif}
+  #home .candlelight-event{background:linear-gradient(125deg,#eff6ec,#dcebe6);border-color:#799b86}
+  #home .candlelight-event-inner{display:block}
+  #home .candlelight-event-copy{padding:20px 22px}
+  #home .candlelight-event-copy .events-title{display:block;color:#536f5a;font:800 14px/1.2 Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+  #home .candlelight-event-copy h2{margin:6px 0 14px}
+  #home .candlelight-event-copy .event-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  #home .candlelight-event-copy .event-item{padding:14px 15px;border-radius:12px;background:#fffdf8;border:1px solid #c5d8cc}
+  #home .candlelight-event-copy .event-item strong{display:block;color:#7b423b;font:800 13px/1.25 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+  #home .candlelight-event-copy .event-item h3{margin:5px 0 7px;font:normal 23px/1.12 Georgia,serif;color:#263a34}
+  #home .candlelight-event-copy .event-item p{font-size:16px}
+  #home .candlelight-event-copy .event-item a{background:#536f5a}
+  @media(max-width:700px){#home .weekend-forecast{grid-template-columns:1fr}#home .candlelight-event-copy .event-list{grid-template-columns:1fr}}
+</style>
+<script>
+  (() => {
+    const condition = code => ({0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Cloudy',45:'Foggy',48:'Foggy',51:'Light drizzle',53:'Drizzle',55:'Drizzle',61:'Light rain',63:'Rain',65:'Rain',80:'Showers',81:'Showers',82:'Showers',95:'Thunderstorms'})[code] || 'Forecast';
+    const showWeekendForecast = async () => {
+      const home = document.getElementById('home');
+      const strip = document.getElementById('todayStrip');
+      if (!home || !strip || document.getElementById('weekendForecast')) return;
+      const section = document.createElement('section');
+      section.id = 'weekendForecast';
+      section.className = 'weekend-forecast';
+      section.setAttribute('aria-label', 'This weekend’s forecast');
+      section.innerHTML = '<article class="weekend-forecast-card"><b>This weekend’s forecast</b><span>Loading Friday through Sunday…</span></article>';
+      strip.after(section);
+      try {
+        const r = await fetch('https://api.open-meteo.com/v1/forecast?latitude=39.5596&longitude=-74.2435&daily=weather_code,temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America%2FNew_York&cache_bust=' + Date.now());
+        const data = await r.json();
+        const dates = ['2026-10-02','2026-10-03','2026-10-04'];
+        const labels = ['Friday · Oct 2','Saturday · Oct 3','Sunday · Oct 4'];
+        section.innerHTML = dates.map((date, index) => {
+          const d = data.daily.time.indexOf(date);
+          return '<article class="weekend-forecast-card"><b>' + labels[index] + '</b><span>' + condition(data.daily.weather_code[d]) + ' · High ' + Math.round(data.daily.temperature_2m_max[d]) + '° · Low ' + Math.round(data.daily.temperature_2m_min[d]) + '°</span></article>';
+        }).join('');
+      } catch (error) {
+        section.innerHTML = '<article class="weekend-forecast-card"><b>This weekend’s forecast</b><span>Forecast is temporarily unavailable.</span></article>';
+      }
+    };
+    const refreshEvents = () => {
+      const event = document.querySelector('#home .candlelight-event');
+      if (!event) return;
+      event.setAttribute('aria-label', 'Upcoming events');
+      event.innerHTML = '<div class="candlelight-event-inner"><div class="candlelight-event-copy"><span class="events-title">Upcoming events</span><h2>Make plans for the island.</h2><div class="event-list"><article class="event-item"><strong>Next event · October 9–10</strong><h3>LBI FLY Kite Festival</h3><p>Colorful kites, family activities, and a Night Fly on Ship Bottom’s beaches.</p><a href="https://lbifly.com/" target="_blank" rel="noopener">Festival details</a></article><article class="event-item"><strong>At the cottage · Saturday, October 3 · 10 AM</strong><h3>Ty Mares</h3><p>Enjoy a live performance at Williams Cottage Inn.</p></article></div></div></div>';
+    };
+    setTimeout(() => { showWeekendForecast(); refreshEvents(); }, 0);
+  })();
+</script>
 </html>
