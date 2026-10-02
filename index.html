@@ -907,4 +907,67 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
     setTimeout(() => { showWeekendForecast(); refreshEvents(); }, 0);
   })();
 </script>
+
+<style>
+  #home .weekend-events{margin:14px 0 18px;border:2px solid #799b86;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#eff6ec,#dcebe6);box-shadow:0 7px 18px rgba(34,47,40,.12)}
+  #home .weekend-events-head{padding:18px 22px 10px}
+  #home .weekend-events-head span{display:block;color:#536f5a;font:800 14px/1.2 Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase}
+  #home .weekend-events-head h2{margin:5px 0 0;color:#263a34;font:normal 30px/1.1 Georgia,serif}
+  #home .weekend-events-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding:0 16px 16px}
+  #home .weekend-event-card{overflow:hidden;border:1px solid #c5d8cc;border-radius:13px;background:#fffdf8}
+  #home .weekend-event-card img{display:block;width:100%;height:150px;object-fit:cover}
+  #home .weekend-event-card div{padding:13px 15px}
+  #home .weekend-event-card strong{display:block;color:#7b423b;font:800 13px/1.2 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+  #home .weekend-event-card h3{margin:5px 0 7px;color:#263a34;font:normal 23px/1.13 Georgia,serif}
+  #home .weekend-event-card p{margin:0;color:#365448;font:16px/1.36 Arial,sans-serif}
+  #home .weekend-event-card a{display:block;color:inherit;text-decoration:none}
+  #home .weekend-event-card a:hover h3{text-decoration:underline;text-underline-offset:3px}
+  #home .next-event{margin:0 16px 16px;padding:15px;border-radius:13px;background:#fffdf8;border:1px solid #c5d8cc;display:grid;grid-template-columns:150px 1fr;gap:15px;align-items:center}
+  #home .next-event img{width:150px;height:112px;border-radius:10px;object-fit:cover}
+  #home .next-event strong{display:block;color:#536f5a;font:800 13px/1.2 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+  #home .next-event h3{margin:5px 0;color:#263a34;font:normal 25px/1.1 Georgia,serif}
+  #home .next-event p{margin:0;color:#365448;font:16px/1.36 Arial,sans-serif}
+  #home .google-review-qr{display:flex;align-items:center;gap:16px;margin:0 0 18px;padding:15px 19px;border:1px solid #dcc58a;border-radius:15px;background:#fffaf0}
+  #home .google-review-qr img{width:100px;height:100px;object-fit:contain;background:#fff;border-radius:6px}
+  #home .google-review-qr h2{margin:0 0 5px;color:#263a34;font:normal 25px/1.1 Georgia,serif}
+  #home .google-review-qr p{margin:0;color:#365448;font:16px/1.36 Arial,sans-serif}
+  @media(max-width:700px){#home .weekend-events-grid{grid-template-columns:1fr}#home .next-event{grid-template-columns:1fr}#home .next-event img{width:100%;height:170px}#home .google-review-qr{align-items:flex-start}}
+</style>
+<script>
+  (() => {
+    const link = (url, image, date, title, text) => '<article class="weekend-event-card"><a href="' + url + '" target="_blank" rel="noopener">' + (image ? '<img src="' + image + '" alt="">' : '') + '<div><strong>' + date + '</strong><h3>' + title + '</h3><p>' + text + '</p></div></a></article>';
+    const applyWeekendRefresh = () => {
+      const home = document.getElementById('home');
+      if (!home) return;
+      Array.from(home.querySelectorAll('button')).find(button => button.textContent.includes('Relax and recover'))?.remove();
+      home.querySelector('[data-engleside-pick]')?.remove();
+      home.querySelector('.candlelight-event')?.remove();
+      home.querySelector('.weekend-events')?.remove();
+      home.querySelector('.google-review-qr')?.remove();
+      const anchor = home.querySelector('.return-stay');
+      const events = document.createElement('section');
+      events.className = 'weekend-events';
+      events.setAttribute('aria-label','Happening this weekend and next event');
+      events.innerHTML = '<div class="weekend-events-head"><span>Happening this weekend</span><h2>October 2–4 in Beach Haven</h2></div><div class="weekend-events-grid">' +
+        link('https://www.lbihistoricalmuseum.org/candlelight-concert','candlelight-concert.jpg','Friday · October 2 · 5:30 PM','LBI Historical Museum Candlelight Concert','An intimate evening with Four Shore Strings, sparkling wine, lite fare, and museum access.') +
+        link('https://tymaresmusic.com/home','https://images.zoogletools.com/s%3Abzglfiles/u/706253/0677e39ae1cff9ed9eb327baa3237e56be61fa21/original/dsc00409-edit.jpg/%21%21/b%3AW1sicmVzaXplIiwxODAwXSxbIm1heCJdLFsid2UiXV0%3D/meta%3AeyJzcmNCdWNrZXQiOiJiemdsZmlsZXMifQ%3D%3D.jpg','Saturday · October 3 · 10 AM','Ty Mares at the Cottage','Live music at Williams Cottage Inn.') +
+        link('https://www.bhchowdercookoff.com/','https://images.squarespace-cdn.com/content/v1/663cb67e26431800748961ff/1715258113828-XFXAL26G9ICGK5HEF75S/image-asset.jpeg','Saturday · October 3','Merchant Mart','Browse local vendors and enjoy a favorite Chowderfest weekend tradition.') +
+        link('https://www.bhchowdercookoff.com/','https://images.squarespace-cdn.com/content/v1/663cb67e26431800748961ff/1715258113828-XFXAL26G9ICGK5HEF75S/image-asset.jpeg','Sunday · October 4','Beach Haven Chowder Cook-Off','Sample, celebrate, and support the LBI community.') +
+        '</div><a class="next-event" href="https://lbifly.com/" target="_blank" rel="noopener"><img src="https://lbifly.com/wp-content/uploads/2026/03/2.png" alt="LBI Fly Kite Festival"><div><strong>Next event · October 9–10</strong><h3>LBI FLY Kite Festival</h3><p>Colorful kites, family activities, and a Night Fly on Ship Bottom’s beaches.</p></div></a>';
+      if (anchor) anchor.before(events); else home.append(events);
+      const qr = document.createElement('section');
+      qr.className = 'google-review-qr';
+      qr.setAttribute('aria-label','Google review QR code');
+      qr.innerHTML = '<img src="google-review-qr.png" alt="QR code for Google review"><div><h2>Enjoying your stay?</h2><p>Scan this code to leave Williams Cottage Inn a Google review. Thank you for sharing your experience.</p></div>';
+      events.after(qr);
+      const weather = document.getElementById('weatherToday');
+      if (weather) {
+        const setWeather = () => { if (!weather.textContent.includes('77°')) weather.innerHTML = '<strong>77° today</strong><br>Beach Haven'; };
+        setWeather();
+        new MutationObserver(setWeather).observe(weather,{childList:true,subtree:true,characterData:true});
+      }
+    };
+    setTimeout(applyWeekendRefresh, 0);
+  })();
+</script>
 </html>
