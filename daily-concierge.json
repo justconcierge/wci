@@ -1,9 +1,6 @@
 {
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "events": {
-    "2026-10-02": [
-      "Oct 2 Vanities: The Musical · 7:30 PM"
-    ],
     "2026-10-03": [
       "Oct 3 Vanities: The Musical · 7:30 PM"
     ],
@@ -111,6 +108,9 @@
     "2027-02-13": [
       "Feb 13 The Original American Idols - A Celebration of Judy Garland & Barbra Streisand · 2:00 PM"
     ],
+    "2026-10-02": [
+      "Oct 2 Vanities: The Musical · 7:30 PM"
+    ],
     "2026-10-01": [
       "Oct 1 Vanities: The Musical · 7:30 PM",
       "Oct 1 Vanities: The Musical · 2:00 PM"
@@ -186,9 +186,9 @@
     ]
   },
   "availability": {
-    "summary": "Next available stay · Friday, Oct 9 · Aviary Room",
+    "summary": "Next available stay · Sunday, Oct 11 · Dome Room · Garden Room · Aviary Room · Angel Room · Blue Room",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Oct 9.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-10-09&end_date=2026-10-10&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Oct 11.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-10-11&end_date=2026-10-12&number_of_adults=2&number_of_children=0"
   }
 }
