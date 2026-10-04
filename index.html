@@ -963,6 +963,7 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
         const data = await response.json();
         section.innerHTML = dates.map(date => {
           const i = data.daily.time.indexOf(dayId(date));
+          if (i < 0) return '<article class="weekend-forecast-card"><b>' + label(date) + '</b><span>Forecast available closer to the date.</span></article>';
           return '<article class="weekend-forecast-card"><b>' + label(date) + '</b><span>' + condition(data.daily.weather_code[i]) + ' · High ' + Math.round(data.daily.temperature_2m_max[i]) + '° · Low ' + Math.round(data.daily.temperature_2m_min[i]) + '°</span></article>';
         }).join('');
       } catch (error) {
