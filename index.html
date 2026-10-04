@@ -942,7 +942,7 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
       return new Date(Date.UTC(Number(v.year),Number(v.month)-1,Number(v.day)));
     };
     const addDays = (date, days) => new Date(date.getTime() + days * 86400000);
-    const label = date => new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',weekday:'long',month:'short',day:'numeric'}).format(date);
+    const label = date => new Intl.DateTimeFormat('en-US',{timeZone:'UTC',weekday:'long',month:'short',day:'numeric'}).format(date);
     const condition = code => ({0:'Clear',1:'Mostly clear',2:'Partly cloudy',3:'Cloudy',45:'Foggy',48:'Foggy',51:'Light drizzle',53:'Drizzle',55:'Drizzle',61:'Light rain',63:'Rain',65:'Rain',80:'Showers',81:'Showers',82:'Showers',95:'Thunderstorms'})[code] || 'Forecast';
     const card = (url, image, date, title, text) => '<article class="weekend-event-card"><a href="' + url + '" target="_blank" rel="noopener">' + (image ? '<img src="' + image + '" alt="">' : '') + '<div><strong>' + date + '</strong><h3>' + title + '</h3><p>' + text + '</p></div></a></article>';
     async function updateForecast() {
@@ -950,8 +950,8 @@ function addLocalGuideCards(){const act=document.querySelector('#activities .car
       if (!home || !strip) return;
       document.getElementById('weekendForecast')?.remove();
       const today = nyToday(), weekday = today.getUTCDay();
-      const friday = weekday === 0 ? addDays(today,-2) : addDays(today,5-weekday);
-      const dates = [friday,addDays(friday,1),addDays(friday,2)];
+      const friday = weekday === 0 ? addDays(today,5) : addDays(today,5-weekday);
+      const dates = [friday,addDays(friday,1),addDays(friday,2),addDays(friday,3)];
       const section = document.createElement('section');
       section.id = 'weekendForecast';
       section.className = 'weekend-forecast';
