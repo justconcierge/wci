@@ -1,10 +1,6 @@
 {
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "events": {
-    "2026-10-08": [
-      "Oct 8 Deceived · 2:00 PM",
-      "Oct 8 Deceived · 7:30 PM"
-    ],
     "2026-10-09": [
       "Oct 9 Deceived · 7:30 PM"
     ],
@@ -98,6 +94,10 @@
     "2027-02-13": [
       "Feb 13 The Original American Idols - A Celebration of Judy Garland & Barbra Streisand · 2:00 PM"
     ],
+    "2026-10-08": [
+      "Oct 8 Deceived · 7:30 PM",
+      "Oct 8 Deceived · 2:00 PM"
+    ],
     "2026-10-07": [
       "Oct 7 Deceived · 7:30 PM",
       "Oct 7 Deceived · 2:00 PM"
@@ -169,18 +169,12 @@
     "2026-09-10": [
       "Sep 10 Ghost The Musical · 7:30 PM",
       "Sep 10 Ghost The Musical · 2:00 PM"
-    ],
-    "2026-09-09": [
-      "Sep 9 Ghost The Musical · 7:30 PM"
-    ],
-    "2026-09-08": [
-      "Sep 8 Ghost The Musical · 7:30 PM"
     ]
   },
   "availability": {
-    "summary": "Next available stay · Thursday, Oct 15 · Dome Room · Garden Room · Aviary Room · Opulent Room · Asian Room · Angel Room · Blue Room · Rose Suite",
+    "summary": "Next available stay · Friday, Oct 16 · Garden Room · Opulent Room · Asian Room · Angel Room",
     "title": "Plan your next stay",
-    "detail": "Rooms shown are available for arrival on Oct 15.",
-    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-10-15&end_date=2026-10-16&number_of_adults=2&number_of_children=0"
+    "detail": "Rooms shown are available for arrival on Oct 16.",
+    "href": "https://secure.thinkreservations.com/williamscottageinn/reservations/availability?start_date=2026-10-16&end_date=2026-10-17&number_of_adults=2&number_of_children=0"
   }
 }
