@@ -1,9 +1,6 @@
 {
-  "updated": "2026-10-11",
+  "updated": "2026-10-12",
   "events": {
-    "2026-10-11": [
-      "Oct 11 Deceived · 2:00 PM"
-    ],
     "2026-10-16": [
       "Oct 16 Urinetown - Presented Starlight PAC · 7:00 PM"
     ],
@@ -88,6 +85,9 @@
     "2027-02-13": [
       "Feb 13 The Original American Idols - A Celebration of Judy Garland & Barbra Streisand · 2:00 PM"
     ],
+    "2026-10-11": [
+      "Oct 11 Deceived · 2:00 PM"
+    ],
     "2026-10-10": [
       "Oct 10 Deceived · 7:30 PM"
     ],
@@ -162,9 +162,6 @@
     ],
     "2026-09-12": [
       "Sep 12 Ghost The Musical · 7:30 PM"
-    ],
-    "2026-09-11": [
-      "Sep 11 An Evening with Groucho · 6:00 PM"
     ]
   },
   "availability": {
