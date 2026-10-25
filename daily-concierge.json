@@ -1,9 +1,6 @@
 {
-  "updated": "2026-10-24",
+  "updated": "2026-10-25",
   "events": {
-    "2026-10-24": [
-      "Oct 24 ALL EXITS - A Statewide Play Reading · 7:00 PM"
-    ],
     "2026-11-07": [
       "Nov 7 Comedy Night - Fundraiser for BHVFC · 7:30 PM"
     ],
@@ -78,6 +75,9 @@
     ],
     "2027-02-13": [
       "Feb 13 The Original American Idols - A Celebration of Judy Garland & Barbra Streisand · 2:00 PM"
+    ],
+    "2026-10-24": [
+      "Oct 24 ALL EXITS - A Statewide Play Reading · 7:00 PM"
     ],
     "2026-10-17": [
       "Oct 17 Urinetown - Presented Starlight PAC · 7:00 PM"
@@ -154,8 +154,7 @@
       "Sep 16 Ghost The Musical · 7:30 PM"
     ],
     "2026-09-15": [
-      "Sep 15 Ghost The Musical · 7:30 PM",
-      "Sep 15 Ghost The Musical · 2:00 PM"
+      "Sep 15 Ghost The Musical · 7:30 PM"
     ]
   },
   "availability": {
