@@ -1,9 +1,6 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "events": {
-    "2026-11-07": [
-      "Nov 7 Comedy Night - Fundraiser for BHVFC · 7:30 PM"
-    ],
     "2026-11-14": [
       "Nov 14 La Traviata - Center Stage Opera · 7:30 PM"
     ],
@@ -555,6 +552,12 @@
     "2027-12-05": [
       "Dec 5 Ebenezer · 2:00 PM"
     ],
+    "2027-12-08": [
+      "Dec 8 Ebenezer · 2:00 PM"
+    ],
+    "2026-11-07": [
+      "Nov 7 Comedy Night - Fundraiser for BHVFC · 7:30 PM"
+    ],
     "2026-10-24": [
       "Oct 24 ALL EXITS - A Statewide Play Reading · 7:00 PM"
     ],
@@ -631,9 +634,6 @@
     ],
     "2026-09-16": [
       "Sep 16 Ghost The Musical · 7:30 PM"
-    ],
-    "2026-09-15": [
-      "Sep 15 Ghost The Musical · 7:30 PM"
     ]
   },
   "availability": {
