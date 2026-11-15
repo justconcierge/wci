@@ -1,9 +1,6 @@
 {
-  "updated": "2026-11-14",
+  "updated": "2026-11-15",
   "events": {
-    "2026-11-14": [
-      "Nov 14 La Traviata - Center Stage Opera · 7:30 PM"
-    ],
     "2026-11-22": [
       "Nov 22 Holidays with The Duprees · 2:00 PM"
     ],
@@ -555,6 +552,12 @@
     "2027-12-08": [
       "Dec 8 Ebenezer · 2:00 PM"
     ],
+    "2027-12-09": [
+      "Dec 9 Ebenezer · 2:00 PM"
+    ],
+    "2026-11-14": [
+      "Nov 14 La Traviata - Center Stage Opera · 7:30 PM"
+    ],
     "2026-11-07": [
       "Nov 7 Comedy Night - Fundraiser for BHVFC · 7:30 PM"
     ],
@@ -631,9 +634,6 @@
     ],
     "2026-09-17": [
       "Sep 17 Ghost The Musical · 7:30 PM"
-    ],
-    "2026-09-16": [
-      "Sep 16 Ghost The Musical · 7:30 PM"
     ]
   },
   "availability": {
