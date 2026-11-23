@@ -1,9 +1,6 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-23",
   "events": {
-    "2026-11-22": [
-      "Nov 22 Holidays with The Duprees · 2:00 PM"
-    ],
     "2026-11-28": [
       "Nov 28 Holiday Inn · 2:00 PM",
       "Nov 28 Holiday Inn · 7:30 PM"
@@ -555,6 +552,12 @@
     "2027-12-09": [
       "Dec 9 Ebenezer · 2:00 PM"
     ],
+    "2027-12-10": [
+      "Dec 10 Ebenezer · 7:30 PM"
+    ],
+    "2026-11-22": [
+      "Nov 22 Holidays with The Duprees · 2:00 PM"
+    ],
     "2026-11-14": [
       "Nov 14 La Traviata - Center Stage Opera · 7:30 PM"
     ],
@@ -631,9 +634,6 @@
     ],
     "2026-09-18": [
       "Sep 18 Ghost The Musical · 7:30 PM"
-    ],
-    "2026-09-17": [
-      "Sep 17 Ghost The Musical · 7:30 PM"
     ]
   },
   "availability": {
